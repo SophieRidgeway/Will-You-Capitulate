@@ -1,0 +1,1462 @@
+Using pre-set license
+Built from '2020.2/release' branch; Version is '2020.2.1f1 (270dd8c3da1c) revision 2559448'; Using compiler version '192528614'; Build Type 'Release'
+OS: 'Windows 10  (10.0.0) 64bit' Language: 'en' Physical Memory: 16313 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 0
+
+ COMMAND LINE ARGUMENTS:
+C:\Users\Sophie\Documents\2020.2.1f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker1
+-projectPath
+B:/OneDrive - University of Lincoln/Uni/Year 3/Project/Will You Capitulate
+-logFile
+Logs/AssetImportWorker1.log
+-srvPort
+65267
+Successfully changed project path to: B:/OneDrive - University of Lincoln/Uni/Year 3/Project/Will You Capitulate
+B:/OneDrive - University of Lincoln/Uni/Year 3/Project/Will You Capitulate
+Using Asset Import Pipeline V2.
+Refreshing native plugins compatible for Editor in 51.82 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2020.2.1f1 (270dd8c3da1c)
+[Subsystems] Discovering subsystems at path C:/Users/Sophie/Documents/2020.2.1f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path B:/OneDrive - University of Lincoln/Uni/Year 3/Project/Will You Capitulate/Assets
+GfxDevice: creating device client; threaded=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: NVIDIA GeForce GTX 1050 Ti (ID=0x1c82)
+    Vendor:   
+    VRAM:     4018 MB
+    Driver:   27.21.14.5671
+Initialize mono
+Mono path[0] = 'C:/Users/Sophie/Documents/2020.2.1f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Users/Sophie/Documents/2020.2.1f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
+Mono config path = 'C:/Users/Sophie/Documents/2020.2.1f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56004
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Users/Sophie/Documents/2020.2.1f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.001427 seconds.
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 50.34 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.148 seconds
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.003004 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.46 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.663 seconds
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.03 seconds
+Refreshing native plugins compatible for Editor in 0.58 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1752 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 161.4 MB.
+System memory in use after: 161.5 MB.
+
+Unloading 12 unused Assets to reduce memory usage. Loaded Objects now: 2202.
+Total: 3.811100 ms (FindLiveObjects: 0.394400 ms CreateObjectMapping: 0.085000 ms MarkObjects: 3.228900 ms  DeleteObjects: 0.100900 ms)
+
+========================================================================
+Received Import Request.
+  path: Assets/CyberCity/demoUIcanvas.prefab
+  artifactKey: Guid(85c2a44f735b6c340bc210202cfa7282) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/CyberCity/demoUIcanvas.prefab using Guid(85c2a44f735b6c340bc210202cfa7282) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1af809b5e62b292dcb0a828b6b589518') in 0.085099 seconds
+  Import took 0.091288 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000243 seconds.
+  path: Assets/CyberCity/Prefab/zeppelin highlight.prefab
+  artifactKey: Guid(ff64d33662a25c842af6e27775d2c98a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/CyberCity/Prefab/zeppelin highlight.prefab using Guid(ff64d33662a25c842af6e27775d2c98a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7601aef4abd4a552b3982b33b318c9f7') in 0.795243 seconds
+  Import took 0.806326 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000298 seconds.
+  path: Assets/CyberCity/Prefab/steam.prefab
+  artifactKey: Guid(d05aaeaa41d1a68449ffa8f47ed6db6b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/CyberCity/Prefab/steam.prefab using Guid(d05aaeaa41d1a68449ffa8f47ed6db6b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9b60a7eea57dfe763d1713c6fcf716f3') in 0.013829 seconds
+  Import took 0.023310 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000233 seconds.
+  path: Assets/CyberCity/Prefab/room box.prefab
+  artifactKey: Guid(fc290bbc85844664d8b4a27123ed47bb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/CyberCity/Prefab/room box.prefab using Guid(fc290bbc85844664d8b4a27123ed47bb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4ebfdd1d4e937e4ce4056f8c4ace1ad7') in 0.130831 seconds
+  Import took 0.139817 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000207 seconds.
+  path: Assets/CyberCity/Prefab/snow.prefab
+  artifactKey: Guid(49a47f703769d8044b6e7b48aae38b3e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/CyberCity/Prefab/snow.prefab using Guid(49a47f703769d8044b6e7b48aae38b3e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1c676a0fa3151db7b9ee19236cd25efa') in 0.010541 seconds
+  Import took 0.020163 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000224 seconds.
+  path: Assets/CyberCity/Prefab
+  artifactKey: Guid(81cd8c64396108a40a6d7b71a3b25114) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/CyberCity/Prefab using Guid(81cd8c64396108a40a6d7b71a3b25114) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b7afdb54ec3d016d922cfff9511f8c79') in 0.008140 seconds
+  Import took 0.014031 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000234 seconds.
+  path: Assets/CyberCity
+  artifactKey: Guid(8e36d4e66d55c4f47afccb285e3d59c5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/CyberCity using Guid(8e36d4e66d55c4f47afccb285e3d59c5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9ec8021fa820fc962f7daef958b8be79') in 0.008237 seconds
+  Import took 0.011060 seconds .
+
+========================================================================
+Received Prepare
+Refreshing native plugins compatible for Editor in 2.23 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 128.8 MB.
+System memory in use after: 128.9 MB.
+
+Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 2211.
+Total: 3.057400 ms (FindLiveObjects: 0.218600 ms CreateObjectMapping: 0.046300 ms MarkObjects: 2.704200 ms  DeleteObjects: 0.087000 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 150.247743 seconds.
+  path: Assets/Player/AssetStore/Cyborg/Cyborg.FBX
+  artifactKey: Guid(1ea406f41cfd23e4eb64f8d2e62fb143) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Player/AssetStore/Cyborg/Cyborg.FBX using Guid(1ea406f41cfd23e4eb64f8d2e62fb143) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '140ad34eb7f2fdb8d0e5b1962582b1ce') in 0.355293 seconds
+  Import took 0.361025 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000240 seconds.
+  path: Assets/Player/AssetStore/Cyborg/RightHand.prefab
+  artifactKey: Guid(e3569085e0f9ffe4198bcc1d37f87336) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Player/AssetStore/Cyborg/RightHand.prefab using Guid(e3569085e0f9ffe4198bcc1d37f87336) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9c2b63575e6eb7950e185057259db9c2') in 0.009902 seconds
+  Import took 0.012922 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000239 seconds.
+  path: Assets/Player/AssetStore/Cyborg/RightForeArm.prefab
+  artifactKey: Guid(3ce3482894a457d498902c63b8d6d212) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Player/AssetStore/Cyborg/RightForeArm.prefab using Guid(3ce3482894a457d498902c63b8d6d212) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '57a78c03e4f7746971c53e5c235c8299') in 0.010633 seconds
+  Import took 0.014147 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000269 seconds.
+  path: Assets/Player/AssetStore/Cyborg/RightShoulder.prefab
+  artifactKey: Guid(b3ac4ed46269bda469287d486293b858) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Player/AssetStore/Cyborg/RightShoulder.prefab using Guid(b3ac4ed46269bda469287d486293b858) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fdd5deec587ac68f85b678ce5d435512') in 0.010826 seconds
+  Import took 0.014276 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000271 seconds.
+  path: Assets/Player/AssetStore/Cyborg/Gun.prefab
+  artifactKey: Guid(7c7afddf630de6a48b0bbf4447c282f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Player/AssetStore/Cyborg/Gun.prefab using Guid(7c7afddf630de6a48b0bbf4447c282f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7d4f5145ce3b6e6d82c888c2e7241437') in 0.088514 seconds
+  Import took 0.092206 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 87.739463 seconds.
+  path: Assets/CyberCity/Prefab/street/antenna 1.prefab
+  artifactKey: Guid(e4895700a5f6fff4e8b3e7391829b19b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/CyberCity/Prefab/street/antenna 1.prefab using Guid(e4895700a5f6fff4e8b3e7391829b19b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8ff892508bc69f017e7210c56f572fec') in 0.032134 seconds
+  Import took 0.035738 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000214 seconds.
+  path: Assets/CyberCity/Prefab/street/garbage.prefab
+  artifactKey: Guid(002cde2708f9b1f43b682b268d76a0d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/CyberCity/Prefab/street/garbage.prefab using Guid(002cde2708f9b1f43b682b268d76a0d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5f6bf1051449cd51ca695c4379cfae5d') in 0.290389 seconds
+  Import took 0.293586 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000265 seconds.
+  path: Assets/CyberCity/Prefab/street/trash bin 1.prefab
+  artifactKey: Guid(ec983aa750f71c249b0813fb7915cb1e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/CyberCity/Prefab/street/trash bin 1.prefab using Guid(ec983aa750f71c249b0813fb7915cb1e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7da436cce1ab5fdc8d949b79c99d3cfa') in 0.551263 seconds
+  Import took 0.555149 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000237 seconds.
+  path: Assets/CyberCity/Prefab/street/fence tile.prefab
+  artifactKey: Guid(def7520d3b9fa9540a2007429cb2ffc7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/CyberCity/Prefab/street/fence tile.prefab using Guid(def7520d3b9fa9540a2007429cb2ffc7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e1ba2548e72f1e6aa805f8c1bb521188') in 0.035241 seconds
+  Import took 0.039373 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000260 seconds.
+  path: Assets/CyberCity/Prefab/street/trash bin 2.prefab
+  artifactKey: Guid(757526e2e36accd49b64de3ecc42382d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/CyberCity/Prefab/street/trash bin 2.prefab using Guid(757526e2e36accd49b64de3ecc42382d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9e623e2e185b79121b9690027a5b5fc0') in 0.032301 seconds
+  Import took 0.036141 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000204 seconds.
+  path: Assets/CyberCity/Prefab/street/antenna 3.prefab
+  artifactKey: Guid(762df383d07f7fa4494a46ba63a937bc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/CyberCity/Prefab/street/antenna 3.prefab using Guid(762df383d07f7fa4494a46ba63a937bc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ba1b4b51fd58cffdcd41da94e357f864') in 0.026321 seconds
+  Import took 0.029465 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000209 seconds.
+  path: Assets/CyberCity/Prefab/street/ground flat.prefab
+  artifactKey: Guid(8aa1cf93a0bf1ca49b7b1302e7b28c41) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/CyberCity/Prefab/street/ground flat.prefab using Guid(8aa1cf93a0bf1ca49b7b1302e7b28c41) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2bff8a52cfa38366bf349e265928a192') in 0.353934 seconds
+  Import took 0.357955 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000320 seconds.
+  path: Assets/CyberCity/Prefab/street/trash bin 3.prefab
+  artifactKey: Guid(90cd8c4931a54064db43d8c90270f5a3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/CyberCity/Prefab/street/trash bin 3.prefab using Guid(90cd8c4931a54064db43d8c90270f5a3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2120c385dc76f56e8679e53f4d8fdcf0') in 0.036624 seconds
+  Import took 0.040862 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000208 seconds.
+  path: Assets/CyberCity/Prefab/street/strlamp 3.prefab
+  artifactKey: Guid(f3da34f34778a1c4e91a77b8f9d67120) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/CyberCity/Prefab/street/strlamp 3.prefab using Guid(f3da34f34778a1c4e91a77b8f9d67120) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5410bc76a1027ee80db2e24619f3e993') in 0.039336 seconds
+  Import took 0.043271 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000351 seconds.
+  path: Assets/CyberCity/Prefab/street/conditioning 1.prefab
+  artifactKey: Guid(7e2abf34b851f7043b9845f27a062bf3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/CyberCity/Prefab/street/conditioning 1.prefab using Guid(7e2abf34b851f7043b9845f27a062bf3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8722041d637ecad494ef53df38267f3d') in 0.035943 seconds
+  Import took 0.040138 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000204 seconds.
+  path: Assets/CyberCity/Prefab/street/hydrant.prefab
+  artifactKey: Guid(f69d14a9859efca48b83c860e97ca29e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/CyberCity/Prefab/street/hydrant.prefab using Guid(f69d14a9859efca48b83c860e97ca29e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4771fd2c95bd735ab21a4566e4f6c215') in 0.036119 seconds
+  Import took 0.039960 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000223 seconds.
+  path: Assets/CyberCity/Prefab/street/long lamp 2.prefab
+  artifactKey: Guid(f1cb7232152865f40b6b3b48328d0b51) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/CyberCity/Prefab/street/long lamp 2.prefab using Guid(f1cb7232152865f40b6b3b48328d0b51) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2a2090d77070f8984c4faa895fb81002') in 0.351862 seconds
+  Import took 0.355720 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000255 seconds.
+  path: Assets/CyberCity/Prefab/street/lamp cone.prefab
+  artifactKey: Guid(4a256332de87490468c9a52eb555f5f9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/CyberCity/Prefab/street/lamp cone.prefab using Guid(4a256332de87490468c9a52eb555f5f9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0ac21d093655510af19b3a20bef5d3a4') in 0.038531 seconds
+  Import took 0.042594 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000205 seconds.
+  path: Assets/CyberCity/Prefab/street/sewer 2.prefab
+  artifactKey: Guid(35ae9c63b899a0645ad76618c46eac75) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/CyberCity/Prefab/street/sewer 2.prefab using Guid(35ae9c63b899a0645ad76618c46eac75) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '09592915876077228de25bfbdf518472') in 0.400440 seconds
+  Import took 0.404391 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000224 seconds.
+  path: Assets/CyberCity/Prefab/street/traffic light pedestrian.prefab
+  artifactKey: Guid(17bfabf2cb8534747957c6bfae169a0a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/CyberCity/Prefab/street/traffic light pedestrian.prefab using Guid(17bfabf2cb8534747957c6bfae169a0a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3638cbd1c45ddbad28c163b2019b51b0') in 0.361721 seconds
+  Import took 0.365868 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000342 seconds.
+  path: Assets/CyberCity/Prefab/street/conditioning 2.prefab
+  artifactKey: Guid(78e46c5ab802b364480019fbba9725aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/CyberCity/Prefab/street/conditioning 2.prefab using Guid(78e46c5ab802b364480019fbba9725aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '18bf1a10493c99a147cc6205cd37801b') in 0.037693 seconds
+  Import took 0.042500 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000217 seconds.
+  path: Assets/CyberCity/Prefab/street/hotdog stand.prefab
+  artifactKey: Guid(fa9b05566d19f1f49a52a3d8d45605d1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/CyberCity/Prefab/street/hotdog stand.prefab using Guid(fa9b05566d19f1f49a52a3d8d45605d1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c3c3e8616df3d2a2d61c89efc2bec8d8') in 0.469095 seconds
+  Import took 0.474899 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000240 seconds.
+  path: Assets/CyberCity/Prefab/street/fence pole door.prefab
+  artifactKey: Guid(11753e07d903380478bfb4cac65bf037) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/CyberCity/Prefab/street/fence pole door.prefab using Guid(11753e07d903380478bfb4cac65bf037) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dc6dcbf0d8d162ab7be4c53ed85d154f') in 0.033118 seconds
+  Import took 0.037438 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000221 seconds.
+  path: Assets/CyberCity/Prefab/street/eat stand.prefab
+  artifactKey: Guid(d6611ca601d56ba4f9bd5ceead6c5533) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/CyberCity/Prefab/street/eat stand.prefab using Guid(d6611ca601d56ba4f9bd5ceead6c5533) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '64f8b06707f606df66cec5d21af7a89c') in 0.705943 seconds
+  Import took 0.713979 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000219 seconds.
+  path: Assets/CyberCity/Prefab/street/pole 2 piece.prefab
+  artifactKey: Guid(cfcede00f0bddb142b51f826fc5aed94) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/CyberCity/Prefab/street/pole 2 piece.prefab using Guid(cfcede00f0bddb142b51f826fc5aed94) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9d4370bb587aa1149c35ea145285fd6b') in 0.036170 seconds
+  Import took 0.040496 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000223 seconds.
+  path: Assets/CyberCity/Prefab/street/sewer 1.prefab
+  artifactKey: Guid(e734217f2d21082419f10b0dd22c99c1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/CyberCity/Prefab/street/sewer 1.prefab using Guid(e734217f2d21082419f10b0dd22c99c1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '570875268cee6bd144cfbe299ef51e02') in 0.035145 seconds
+  Import took 0.038913 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000205 seconds.
+  path: Assets/CyberCity/Prefab/street/pole 2.prefab
+  artifactKey: Guid(13dd333a711a7db48bde70ce4cb78c5e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/CyberCity/Prefab/street/pole 2.prefab using Guid(13dd333a711a7db48bde70ce4cb78c5e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1b311d43c8d486bc4fec79e877975b8c') in 0.033579 seconds
+  Import took 0.037095 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000232 seconds.
+  path: Assets/CyberCity/Prefab/street/fence pole.prefab
+  artifactKey: Guid(8653524493a3b7c4da8ad10ac8262e89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/CyberCity/Prefab/street/fence pole.prefab using Guid(8653524493a3b7c4da8ad10ac8262e89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2483ecc61250081231845786817e8d65') in 0.035072 seconds
+  Import took 0.038677 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000209 seconds.
+  path: Assets/CyberCity/Prefab/street/sewer 3.prefab
+  artifactKey: Guid(328a8441c410ea8479dd128b7de974a0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/CyberCity/Prefab/street/sewer 3.prefab using Guid(328a8441c410ea8479dd128b7de974a0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0050c70ca15349a49e05b38d145a9286') in 0.035846 seconds
+  Import took 0.039595 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000293 seconds.
+  path: Assets/CyberCity/Prefab/street/fence door.prefab
+  artifactKey: Guid(163168476ccf99543a065b304d408191) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/CyberCity/Prefab/street/fence door.prefab using Guid(163168476ccf99543a065b304d408191) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '046953ff04312a89080226f84b12a1bc') in 0.035290 seconds
+  Import took 0.039621 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000192 seconds.
+  path: Assets/CyberCity/Prefab/street/conditioning hldr.prefab
+  artifactKey: Guid(0ed30333ef23878489b507aa78ca3da4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/CyberCity/Prefab/street/conditioning hldr.prefab using Guid(0ed30333ef23878489b507aa78ca3da4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '58a77cac0d619c2be09ebb79da2dd1ef') in 0.038183 seconds
+  Import took 0.042701 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000283 seconds.
+  path: Assets/CyberCity/Prefab/street/fence tile half.prefab
+  artifactKey: Guid(30a6837b1c8a96c4c930f25d81cf00b3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/CyberCity/Prefab/street/fence tile half.prefab using Guid(30a6837b1c8a96c4c930f25d81cf00b3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e7657a0831e896e07c89782b01103ad4') in 0.033271 seconds
+  Import took 0.036884 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000220 seconds.
+  path: Assets/CyberCity/Prefab/street/strlamp short.prefab
+  artifactKey: Guid(8eca141772d223449bd23a2a24843d39) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/CyberCity/Prefab/street/strlamp short.prefab using Guid(8eca141772d223449bd23a2a24843d39) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '31149c353e503ceb5460b8e863f3d687') in 0.036009 seconds
+  Import took 0.039726 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000214 seconds.
+  path: Assets/CyberCity/Prefab/street/fire ladder.prefab
+  artifactKey: Guid(4380dcf2af327dd43b97df7696258d51) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/CyberCity/Prefab/street/fire ladder.prefab using Guid(4380dcf2af327dd43b97df7696258d51) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b9d974c2580ecaf03a327f92abb1de5a') in 0.034238 seconds
+  Import took 0.038985 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000293 seconds.
+  path: Assets/CyberCity/Prefab/street/strlamp cone.prefab
+  artifactKey: Guid(83fddce1d67e3584f885adf939b107c3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/CyberCity/Prefab/street/strlamp cone.prefab using Guid(83fddce1d67e3584f885adf939b107c3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5a98fc193edba4297f47a3fffb905b8f') in 0.038957 seconds
+  Import took 0.043886 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000224 seconds.
+  path: Assets/CyberCity/Prefab/street/pole 1.prefab
+  artifactKey: Guid(ebac1f3adfbd47f43b3e94fa41bf4abc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/CyberCity/Prefab/street/pole 1.prefab using Guid(ebac1f3adfbd47f43b3e94fa41bf4abc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b989f66e0ae41970e12083118d08c484') in 0.032339 seconds
+  Import took 0.035864 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000195 seconds.
+  path: Assets/CyberCity/Prefab/street/traffic light.prefab
+  artifactKey: Guid(a5b7cb6b4bf1a1f43a4f64268dfd9461) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/CyberCity/Prefab/street/traffic light.prefab using Guid(a5b7cb6b4bf1a1f43a4f64268dfd9461) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'af6faff4ae3cfd84361391c33739e462') in 0.038887 seconds
+  Import took 0.043269 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000219 seconds.
+  path: Assets/CyberCity/Prefab/street/antenna 2.prefab
+  artifactKey: Guid(8e6503e23b144c246b7dcab289ce4a51) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/CyberCity/Prefab/street/antenna 2.prefab using Guid(8e6503e23b144c246b7dcab289ce4a51) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8347cc65382ca54ac700ac855230a761') in 0.026652 seconds
+  Import took 0.030594 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000230 seconds.
+  path: Assets/CyberCity/Prefab/street/long lamp 1.prefab
+  artifactKey: Guid(00b9f6302ecadec4e8541e7d57ec4482) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/CyberCity/Prefab/street/long lamp 1.prefab using Guid(00b9f6302ecadec4e8541e7d57ec4482) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '15d323a3d21dc54d7249fa5434f76224') in 0.035338 seconds
+  Import took 0.039474 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000215 seconds.
+  path: Assets/CyberCity/Prefab/street/antenna 2.prefab
+  artifactKey: Guid(8e6503e23b144c246b7dcab289ce4a51) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/CyberCity/Prefab/street/antenna 2.prefab using Guid(8e6503e23b144c246b7dcab289ce4a51) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8347cc65382ca54ac700ac855230a761') in 0.017556 seconds
+  Import took 0.021344 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000275 seconds.
+  path: Assets/CyberCity/Prefab/street/strlamp.prefab
+  artifactKey: Guid(30abec6967bed2a4d914d2897d811421) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/CyberCity/Prefab/street/strlamp.prefab using Guid(30abec6967bed2a4d914d2897d811421) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '867fb05c83680ed32a3e874e4b7ffab3') in 0.036630 seconds
+  Import took 0.041039 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 10.324726 seconds.
+  path: Assets/CyberCity/Prefab/rooms not 1 floor/curtain flat fake.prefab
+  artifactKey: Guid(8f60a14775204af4c81555d75e51eacf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/CyberCity/Prefab/rooms not 1 floor/curtain flat fake.prefab using Guid(8f60a14775204af4c81555d75e51eacf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5217306b8282da463b5a32d20b9ca215') in 0.032011 seconds
+  Import took 0.035404 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000294 seconds.
+  path: Assets/CyberCity/Prefab/rooms not 1 floor/wall window classic 6.prefab
+  artifactKey: Guid(b7d8510698ae46b4aada1e282cfa12ca) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/CyberCity/Prefab/rooms not 1 floor/wall window classic 6.prefab using Guid(b7d8510698ae46b4aada1e282cfa12ca) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9dd82f84e336ab7b415754fbe8a2aa55') in 0.203295 seconds
+  Import took 0.209717 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000249 seconds.
+  path: Assets/CyberCity/Prefab/rooms not 1 floor/wall window classic 4.prefab
+  artifactKey: Guid(554ee0f896c16ea4390c50f38f734126) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/CyberCity/Prefab/rooms not 1 floor/wall window classic 4.prefab using Guid(554ee0f896c16ea4390c50f38f734126) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f9dd4a9843aa59739b686c0e96b41839') in 0.061523 seconds
+  Import took 0.067827 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000231 seconds.
+  path: Assets/CyberCity/Prefab/rooms not 1 floor/wall window 3.prefab
+  artifactKey: Guid(0692651a7f0fab647bc3936288540bc3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/CyberCity/Prefab/rooms not 1 floor/wall window 3.prefab using Guid(0692651a7f0fab647bc3936288540bc3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ab758d1b0b2a21d46169134919bf3e1e') in 0.065201 seconds
+  Import took 0.071511 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000238 seconds.
+  path: Assets/CyberCity/Prefab/rooms not 1 floor/wall window 5.prefab
+  artifactKey: Guid(6343d2a76f86aa64f850142564dd4502) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/CyberCity/Prefab/rooms not 1 floor/wall window 5.prefab using Guid(6343d2a76f86aa64f850142564dd4502) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0cabce2d3a7f37dc925717bd3652b672') in 0.059153 seconds
+  Import took 0.065582 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000236 seconds.
+  path: Assets/CyberCity/Prefab/rooms not 1 floor/wall window classic 3.prefab
+  artifactKey: Guid(f7cd23b2bce22e745bea225e42825700) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/CyberCity/Prefab/rooms not 1 floor/wall window classic 3.prefab using Guid(f7cd23b2bce22e745bea225e42825700) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '172d0b982cf861e71403e797e96a669d') in 0.059264 seconds
+  Import took 0.065482 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000240 seconds.
+  path: Assets/CyberCity/Prefab/rooms not 1 floor/wall window 4.prefab
+  artifactKey: Guid(b2bd65e6e1f686d459184cd8d2b5f331) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/CyberCity/Prefab/rooms not 1 floor/wall window 4.prefab using Guid(b2bd65e6e1f686d459184cd8d2b5f331) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '80b0cb6b13c127c0fec851f48885a07b') in 0.067925 seconds
+  Import took 0.074725 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000203 seconds.
+  path: Assets/CyberCity/Prefab/rooms not 1 floor/wall window 1.prefab
+  artifactKey: Guid(edb947913b201fd49816ceb2b6184874) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/CyberCity/Prefab/rooms not 1 floor/wall window 1.prefab using Guid(edb947913b201fd49816ceb2b6184874) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a3fcf2f0b6293a48c604d7f72f2b3a49') in 0.066869 seconds
+  Import took 0.073618 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000257 seconds.
+  path: Assets/CyberCity/Prefab/rooms not 1 floor/wall window classic 5.prefab
+  artifactKey: Guid(40f6d5049543e4c499d473d41e80f3cb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/CyberCity/Prefab/rooms not 1 floor/wall window classic 5.prefab using Guid(40f6d5049543e4c499d473d41e80f3cb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1786da1c44c95ff8cb26d79c979f600f') in 0.061015 seconds
+  Import took 0.067060 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000230 seconds.
+  path: Assets/CyberCity/Prefab/rooms not 1 floor/wall window classic 1.prefab
+  artifactKey: Guid(e690f49c7d3f70e4287202edb74f6cf6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/CyberCity/Prefab/rooms not 1 floor/wall window classic 1.prefab using Guid(e690f49c7d3f70e4287202edb74f6cf6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '05a25668e6b923a805fabf181b0fdea8') in 0.060132 seconds
+  Import took 0.066267 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000368 seconds.
+  path: Assets/CyberCity/Prefab/rooms not 1 floor/wall window 2.prefab
+  artifactKey: Guid(fdc0984781a9ffe4cb9be3d90a91bba0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/CyberCity/Prefab/rooms not 1 floor/wall window 2.prefab using Guid(fdc0984781a9ffe4cb9be3d90a91bba0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '696c837efc79ddd096d6aa644dc7516c') in 0.064204 seconds
+  Import took 0.070614 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000227 seconds.
+  path: Assets/CyberCity/Prefab/rooms not 1 floor/wall window 1 corn.prefab
+  artifactKey: Guid(cf6d7aebc4b28264e919305369c398ee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/CyberCity/Prefab/rooms not 1 floor/wall window 1 corn.prefab using Guid(cf6d7aebc4b28264e919305369c398ee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f53afaf911514c3be3f18372652960ae') in 0.159118 seconds
+  Import took 0.166201 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000279 seconds.
+  path: Assets/CyberCity/Prefab/rooms not 1 floor/wall window classic 2.prefab
+  artifactKey: Guid(96e99b6aff5fd6e42b0e6c9b47aeba9e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/CyberCity/Prefab/rooms not 1 floor/wall window classic 2.prefab using Guid(96e99b6aff5fd6e42b0e6c9b47aeba9e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2f38905b4bcf3994e604acd5c275295d') in 0.062352 seconds
+  Import took 0.068152 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 266.902882 seconds.
+  path: Assets/CyberCity/Prefab/rooms not 1 floor
+  artifactKey: Guid(ec5cb3d1ebe417c43abb365639b6eed5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/CyberCity/Prefab/rooms not 1 floor using Guid(ec5cb3d1ebe417c43abb365639b6eed5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5fb0f6cb60e2c24725254cd67cd9289f') in 0.011767 seconds
+  Import took 0.014978 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 66.010578 seconds.
+  path: Assets/CyberCity/Prefab/distant building
+  artifactKey: Guid(5cc34669df2c79d459ac3d22c8ed74c6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/CyberCity/Prefab/distant building using Guid(5cc34669df2c79d459ac3d22c8ed74c6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ee9fcc558b7f656ea1d1d88a35f8ab9d') in 0.010533 seconds
+  Import took 0.014010 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.082692 seconds.
+  path: Assets/CyberCity/Prefab/distant building/dist building_1.prefab
+  artifactKey: Guid(36375e38e0dacf347b54624fc5c56c83) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/CyberCity/Prefab/distant building/dist building_1.prefab using Guid(36375e38e0dacf347b54624fc5c56c83) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8be9e922b57b299a1065c63bf6c73df1') in 0.189251 seconds
+  Import took 0.194705 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000262 seconds.
+  path: Assets/CyberCity/Prefab/distant building/dist building_2.prefab
+  artifactKey: Guid(31eb910e85fa3c842b06f601667eac2f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/CyberCity/Prefab/distant building/dist building_2.prefab using Guid(31eb910e85fa3c842b06f601667eac2f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0bd42f683375089e1274e78adb67e8ba') in 0.034005 seconds
+  Import took 0.038223 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000237 seconds.
+  path: Assets/CyberCity/Prefab/distant building/dist building_3.prefab
+  artifactKey: Guid(59723ce39c96a104c91d2031485b3fae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/CyberCity/Prefab/distant building/dist building_3.prefab using Guid(59723ce39c96a104c91d2031485b3fae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3d723f78dcc40b24db2b26b6aaaac031') in 0.034985 seconds
+  Import took 0.039147 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 137.044815 seconds.
+  path: Assets/CyberCity/Prefab/street
+  artifactKey: Guid(c7127bfeab41457448cf34f046c8bb75) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/CyberCity/Prefab/street using Guid(c7127bfeab41457448cf34f046c8bb75) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ca6f5cc40cfe5d2c8f3d775d3820789a') in 0.010916 seconds
+  Import took 0.014093 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 9.687719 seconds.
+  path: Assets/CyberCity/Prefab/street/car
+  artifactKey: Guid(ec523a10394cbc742a38aae8806ad26a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/CyberCity/Prefab/street/car using Guid(ec523a10394cbc742a38aae8806ad26a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '964d0fd49a8097082ace8793fec88737') in 0.009287 seconds
+  Import took 0.012480 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.088353 seconds.
+  path: Assets/CyberCity/Prefab/street/car/car black.prefab
+  artifactKey: Guid(ab839ed1efec1694b9f5c018dddaa855) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/CyberCity/Prefab/street/car/car black.prefab using Guid(ab839ed1efec1694b9f5c018dddaa855) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ee3a6451b9d3d7607158aa74933d4da7') in 0.195731 seconds
+  Import took 0.205224 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000253 seconds.
+  path: Assets/CyberCity/Prefab/street/car/car green.prefab
+  artifactKey: Guid(a4a3fa2a1a1585e4490b9c826798886f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/CyberCity/Prefab/street/car/car green.prefab using Guid(a4a3fa2a1a1585e4490b9c826798886f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '32e5bf74abc081e10cb2e6ade83970ac') in 0.095310 seconds
+  Import took 0.104720 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000254 seconds.
+  path: Assets/CyberCity/Prefab/street/car/car white.prefab
+  artifactKey: Guid(a7fb87e6b94b7e042834fa54e0a1cddc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/CyberCity/Prefab/street/car/car white.prefab using Guid(a7fb87e6b94b7e042834fa54e0a1cddc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd66a698c461df52df41f2334687f409b') in 0.095586 seconds
+  Import took 0.104545 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000209 seconds.
+  path: Assets/CyberCity/Prefab/street/car/car metalic.prefab
+  artifactKey: Guid(bf985132022cfdd4d8a72e3a2d90a4b0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/CyberCity/Prefab/street/car/car metalic.prefab using Guid(bf985132022cfdd4d8a72e3a2d90a4b0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'aacf83c907c4059e0be6194a461ce19d') in 0.095466 seconds
+  Import took 0.104220 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000210 seconds.
+  path: Assets/CyberCity/Prefab/street/car/car red.prefab
+  artifactKey: Guid(9d0b5123fa94e63489e84772c2cef910) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/CyberCity/Prefab/street/car/car red.prefab using Guid(9d0b5123fa94e63489e84772c2cef910) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fa7e7e29a7021a4060cb22dd8b075e8f') in 0.100778 seconds
+  Import took 0.110114 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 14.410963 seconds.
+  path: Assets/CyberCity/Prefab/street/street
+  artifactKey: Guid(0f41c53573e6ee04c9252bc55b7bb86c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/CyberCity/Prefab/street/street using Guid(0f41c53573e6ee04c9252bc55b7bb86c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'eae72667e281400e83fca0bed77f1c79') in 0.006088 seconds
+  Import took 0.009526 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000346 seconds.
+  path: Assets/CyberCity/Prefab/street/street
+  artifactKey: Guid(0f41c53573e6ee04c9252bc55b7bb86c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/CyberCity/Prefab/street/street using Guid(0f41c53573e6ee04c9252bc55b7bb86c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'eae72667e281400e83fca0bed77f1c79') in 0.004438 seconds
+  Import took 0.007594 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.081097 seconds.
+  path: Assets/CyberCity/Prefab/street/street/dirty corner in.prefab
+  artifactKey: Guid(bf25e3bbad6f1b448adbe1530a0eec8d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/CyberCity/Prefab/street/street/dirty corner in.prefab using Guid(bf25e3bbad6f1b448adbe1530a0eec8d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7f1ae6456834005bed58f037a51a58b3') in 0.298804 seconds
+  Import took 0.303018 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000260 seconds.
+  path: Assets/CyberCity/Prefab/street/street/dirty end.prefab
+  artifactKey: Guid(62a3563cbf217f24bb527c6265b16713) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/CyberCity/Prefab/street/street/dirty end.prefab using Guid(62a3563cbf217f24bb527c6265b16713) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3ad5f717b97a774d502fd7fef8920aa5') in 0.023395 seconds
+  Import took 0.027128 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000210 seconds.
+  path: Assets/CyberCity/Prefab/street/street/street corn out B.prefab
+  artifactKey: Guid(0bff4e59bc5533649a749c5bd3036a31) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/CyberCity/Prefab/street/street/street corn out B.prefab using Guid(0bff4e59bc5533649a749c5bd3036a31) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8d311c719b773f35942ce76e5211b0e0') in 0.156297 seconds
+  Import took 0.160221 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000258 seconds.
+  path: Assets/CyberCity/Prefab/street/street/street end D.prefab
+  artifactKey: Guid(d4d28ac84913e3544bd13fe8e0a641e6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/CyberCity/Prefab/street/street/street end D.prefab using Guid(d4d28ac84913e3544bd13fe8e0a641e6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bca29895f92cc2bfcebe27a50c4c8501') in 0.059753 seconds
+  Import took 0.065371 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000270 seconds.
+  path: Assets/CyberCity/Prefab/street/street/street dir A.prefab
+  artifactKey: Guid(d9ce2637c7b8abf4e91d4c00f21f288c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/CyberCity/Prefab/street/street/street dir A.prefab using Guid(d9ce2637c7b8abf4e91d4c00f21f288c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b2ca95f9e779df4b85d62d0b2ba67185') in 0.035731 seconds
+  Import took 0.039977 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000231 seconds.
+  path: Assets/CyberCity/Prefab/street/street/street corn in B.prefab
+  artifactKey: Guid(e8cf64945feda794ab683ff615364d3a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/CyberCity/Prefab/street/street/street corn in B.prefab using Guid(e8cf64945feda794ab683ff615364d3a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '825bf680f768571177d5ff2863efcc24') in 0.056202 seconds
+  Import took 0.062331 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000220 seconds.
+  path: Assets/CyberCity/Prefab/street/street/street corn in D.prefab
+  artifactKey: Guid(91b7528c487658d42bdd5a953bfcba7c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/CyberCity/Prefab/street/street/street corn in D.prefab using Guid(91b7528c487658d42bdd5a953bfcba7c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0b675fa6ad4a5ec6cdc7586440aa2171') in 0.051943 seconds
+  Import took 0.057773 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000220 seconds.
+  path: Assets/CyberCity/Prefab/street/street/dirty corner out.prefab
+  artifactKey: Guid(0c531d12bb162b64abc56c5cab74dadb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/CyberCity/Prefab/street/street/dirty corner out.prefab using Guid(0c531d12bb162b64abc56c5cab74dadb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8538947253076e1e839ec14287fe11f6') in 0.025832 seconds
+  Import took 0.029737 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000241 seconds.
+  path: Assets/CyberCity/Prefab/street/street/street end A.prefab
+  artifactKey: Guid(b13ac4aab59e1b249ac63697832aaace) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/CyberCity/Prefab/street/street/street end A.prefab using Guid(b13ac4aab59e1b249ac63697832aaace) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fbf97c9f8851cdf78f4807859126f49c') in 0.056301 seconds
+  Import took 0.061641 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000218 seconds.
+  path: Assets/CyberCity/Prefab/street/street/street end C.prefab
+  artifactKey: Guid(ed5a8706e39904348b93e6717b0f637b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/CyberCity/Prefab/street/street/street end C.prefab using Guid(ed5a8706e39904348b93e6717b0f637b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd23e4ba54da5401409f831d538d651fe') in 0.053000 seconds
+  Import took 0.058628 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000234 seconds.
+  path: Assets/CyberCity/Prefab/street/street/street corn in C.prefab
+  artifactKey: Guid(5a2bb85bece240442ad401d46e2aa153) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/CyberCity/Prefab/street/street/street corn in C.prefab using Guid(5a2bb85bece240442ad401d46e2aa153) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6546a35b85ecec3dee989dc877bc2bf2') in 0.053860 seconds
+  Import took 0.059905 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000226 seconds.
+  path: Assets/CyberCity/Prefab/street/street/dirty direct.prefab
+  artifactKey: Guid(84047aa9d4e2d2d4ba3f168e82fd834d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/CyberCity/Prefab/street/street/dirty direct.prefab using Guid(84047aa9d4e2d2d4ba3f168e82fd834d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6848a58ed489ab9ae690c2fed48941bf') in 0.023315 seconds
+  Import took 0.026885 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000235 seconds.
+  path: Assets/CyberCity/Prefab/street/street/street dir C.prefab
+  artifactKey: Guid(02ddc2643e49bdb4a8204b036c68c910) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/CyberCity/Prefab/street/street/street dir C.prefab using Guid(02ddc2643e49bdb4a8204b036c68c910) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ea01a39856ee7675e88a423f42f51371') in 0.033818 seconds
+  Import took 0.038173 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000217 seconds.
+  path: Assets/CyberCity/Prefab/street/street/street corn out A.prefab
+  artifactKey: Guid(edcfc41930474374980e3a8363667102) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/CyberCity/Prefab/street/street/street corn out A.prefab using Guid(edcfc41930474374980e3a8363667102) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0e3da08795a6a6883431d2dd2d81d02a') in 0.035299 seconds
+  Import took 0.040178 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000234 seconds.
+  path: Assets/CyberCity/Prefab/street/street/street corn out D.prefab
+  artifactKey: Guid(9d86054c7ea07bc4ab5b6e3b15594dc8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/CyberCity/Prefab/street/street/street corn out D.prefab using Guid(9d86054c7ea07bc4ab5b6e3b15594dc8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9653dd3de8ec0153f0b584f6e700983b') in 0.033725 seconds
+  Import took 0.037978 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000236 seconds.
+  path: Assets/CyberCity/Prefab/street/street/street corn in A.prefab
+  artifactKey: Guid(ddeb96828bff13943bf5d386b4b32341) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/CyberCity/Prefab/street/street/street corn in A.prefab using Guid(ddeb96828bff13943bf5d386b4b32341) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '91cbad6d6423a706bf5c80e543081a8b') in 0.051921 seconds
+  Import took 0.057334 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000207 seconds.
+  path: Assets/CyberCity/Prefab/street/street/street corn out C.prefab
+  artifactKey: Guid(317ec92afc097e844b27026a28dae5bb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/CyberCity/Prefab/street/street/street corn out C.prefab using Guid(317ec92afc097e844b27026a28dae5bb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '89c9b1cec261b16da3788ed01ae6c9a3') in 0.032541 seconds
+  Import took 0.036589 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000250 seconds.
+  path: Assets/CyberCity/Prefab/street/street/street dir D.prefab
+  artifactKey: Guid(e9b9525cd295a6e409b4a0ff165da35b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/CyberCity/Prefab/street/street/street dir D.prefab using Guid(e9b9525cd295a6e409b4a0ff165da35b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7971c758bd99b14aaad4132dadad6d28') in 0.032722 seconds
+  Import took 0.036862 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000246 seconds.
+  path: Assets/CyberCity/Prefab/street/street/street dir B.prefab
+  artifactKey: Guid(6efdb3c1fd460f246b557895398e4f11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/CyberCity/Prefab/street/street/street dir B.prefab using Guid(6efdb3c1fd460f246b557895398e4f11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f4c7b1915037ae74e85914016c83dde1') in 0.034568 seconds
+  Import took 0.038219 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000229 seconds.
+  path: Assets/CyberCity/Prefab/street/street/street end B.prefab
+  artifactKey: Guid(81a5eb36e2e2e024bb6aae2b01009375) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/CyberCity/Prefab/street/street/street end B.prefab using Guid(81a5eb36e2e2e024bb6aae2b01009375) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8374ee0466dc652210ba2a8900e1d124') in 0.052730 seconds
+  Import took 0.058400 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 17.445770 seconds.
+  path: Assets/CyberCity/Materials/steam.mat
+  artifactKey: Guid(89a858afa764bba44af6977385d3111e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/CyberCity/Materials/steam.mat using Guid(89a858afa764bba44af6977385d3111e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '273626cb4cd797867c99dbd2c0c0bdda') in 0.042143 seconds
+  Import took 0.046407 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 47.332194 seconds.
+  path: Assets/CyberCity/Textures
+  artifactKey: Guid(00888e9653fe8fd48b96af9cf13e3f0f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/CyberCity/Textures using Guid(00888e9653fe8fd48b96af9cf13e3f0f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3e03a7aa45067a72c690c1c7eb974d26') in 0.011402 seconds
+  Import took 0.014623 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.089051 seconds.
+  path: Assets/CyberCity/Textures/antenna_Albedo.tga
+  artifactKey: Guid(051812927ba3b8a4d900c18503dadb4c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/CyberCity/Textures/antenna_Albedo.tga using Guid(051812927ba3b8a4d900c18503dadb4c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0cdfb85fa40106b0da02a400e030ca11') in 0.029400 seconds
+  Import took 0.033089 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000220 seconds.
+  path: Assets/CyberCity/Textures/Asphalt 2 B.png
+  artifactKey: Guid(a845d949c4cb75646a23e505701936d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/CyberCity/Textures/Asphalt 2 B.png using Guid(a845d949c4cb75646a23e505701936d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fdac37d24335e00f20074c34b39479b0') in 0.027305 seconds
+  Import took 0.031033 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000218 seconds.
+  path: Assets/CyberCity/Textures/Asphalt 1 B S.tga
+  artifactKey: Guid(00b47d98d04213b4da878c09732d6995) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/CyberCity/Textures/Asphalt 1 B S.tga using Guid(00b47d98d04213b4da878c09732d6995) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '113f2cd731ae6bf6d35ae32bdd7b28a7') in 0.095492 seconds
+  Import took 0.098917 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000211 seconds.
+  path: Assets/CyberCity/Textures/Concrete 6 S.tga
+  artifactKey: Guid(d173069f4cba9ea48b286916fa807392) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/CyberCity/Textures/Concrete 6 S.tga using Guid(d173069f4cba9ea48b286916fa807392) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '32f1098828dfa824571caa5bed1975c1') in 0.133822 seconds
+  Import took 0.137608 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000221 seconds.
+  path: Assets/CyberCity/Textures/Concrete 9 S.tga
+  artifactKey: Guid(1cad2bdfa0cc3c640992a38564c15a08) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/CyberCity/Textures/Concrete 9 S.tga using Guid(1cad2bdfa0cc3c640992a38564c15a08) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a5946cfd1c9563d387edfa40070c5ad8') in 0.016399 seconds
+  Import took 0.020029 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000241 seconds.
+  path: Assets/CyberCity/Textures/DemoReflect.exr
+  artifactKey: Guid(637fff948a351b14298e9ad46fee810b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/CyberCity/Textures/DemoReflect.exr using Guid(637fff948a351b14298e9ad46fee810b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6b63c83c20cbf41fd2a28db17ae8cf29') in 0.043083 seconds
+  Import took 0.046874 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000238 seconds.
+  path: Assets/CyberCity/Textures/Concrete 10 c S.tga
+  artifactKey: Guid(0ff701d55af255e46b379b11d7bd326b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/CyberCity/Textures/Concrete 10 c S.tga using Guid(0ff701d55af255e46b379b11d7bd326b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '68a1d4aa7397575d40ed342cdee79804') in 0.021077 seconds
+  Import took 0.024582 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000229 seconds.
+  path: Assets/CyberCity/Textures/Concrete 6 N.png
+  artifactKey: Guid(762018e2b0d4e2d40a4895874df0c245) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/CyberCity/Textures/Concrete 6 N.png using Guid(762018e2b0d4e2d40a4895874df0c245) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '788238ca03c486232e9ba999e805000a') in 0.025986 seconds
+  Import took 0.029570 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000298 seconds.
+  path: Assets/CyberCity/Textures/detail2_Emission.png
+  artifactKey: Guid(cafaa62c6ef14f2458095a24a51bf155) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/CyberCity/Textures/detail2_Emission.png using Guid(cafaa62c6ef14f2458095a24a51bf155) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '49d69828b3c09c5016b78bb56541f4c5') in 0.020553 seconds
+  Import took 0.024430 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000297 seconds.
+  path: Assets/CyberCity/Textures/Asphalt 1 N.png
+  artifactKey: Guid(87f3ce94f9892fa4ba838f1264402a5f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/CyberCity/Textures/Asphalt 1 N.png using Guid(87f3ce94f9892fa4ba838f1264402a5f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0eb15660b5f4c46fae31b0e63fca6aba') in 0.024774 seconds
+  Import took 0.028488 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000246 seconds.
+  path: Assets/CyberCity/Textures/Asphalt 2.png
+  artifactKey: Guid(444e39d0adaec4c4487e8584cd97c976) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/CyberCity/Textures/Asphalt 2.png using Guid(444e39d0adaec4c4487e8584cd97c976) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3a10e87368d98aa5adf6373ce3c9d6ac') in 0.022320 seconds
+  Import took 0.026208 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000241 seconds.
+  path: Assets/CyberCity/Textures/Concrete 3.png
+  artifactKey: Guid(37890194106b09849ac0bdc46dc62301) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/CyberCity/Textures/Concrete 3.png using Guid(37890194106b09849ac0bdc46dc62301) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7454badba07cdd3dd6d69d5de3e5d801') in 0.020365 seconds
+  Import took 0.023913 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000228 seconds.
+  path: Assets/CyberCity/Textures/Asphalt 1.png
+  artifactKey: Guid(9122ffcd1b3421e4ab0308f7af30abbe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/CyberCity/Textures/Asphalt 1.png using Guid(9122ffcd1b3421e4ab0308f7af30abbe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a39d6c7947c6651c52afb6449a70d18f') in 0.083917 seconds
+  Import took 0.087293 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000237 seconds.
+  path: Assets/CyberCity/Textures/cable_Specular.tga
+  artifactKey: Guid(2149b5e5761028e48b3661fbc8de7a1a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/CyberCity/Textures/cable_Specular.tga using Guid(2149b5e5761028e48b3661fbc8de7a1a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c8c560c33be1e49e7c3214db41430bd0') in 0.126166 seconds
+  Import took 0.130085 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000281 seconds.
+  path: Assets/CyberCity/Textures/Concrete 5.png
+  artifactKey: Guid(60b40b4dd775be6428e9d6605a40906d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/CyberCity/Textures/Concrete 5.png using Guid(60b40b4dd775be6428e9d6605a40906d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'da6d9cffde8e4e2c4568da25efbdf6a0') in 0.022963 seconds
+  Import took 0.027409 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000297 seconds.
+  path: Assets/CyberCity/Textures/Concrete 1 S.tga
+  artifactKey: Guid(b293f02657048644e842cbc749e8cbb4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/CyberCity/Textures/Concrete 1 S.tga using Guid(b293f02657048644e842cbc749e8cbb4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '02455d1de19c3e45e6d79a5e3d8a37c2') in 0.017257 seconds
+  Import took 0.021341 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000204 seconds.
+  path: Assets/CyberCity/Textures/Concrete 9 N.png
+  artifactKey: Guid(84b74a4898a31664eb9f91f6eec15563) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/CyberCity/Textures/Concrete 9 N.png using Guid(84b74a4898a31664eb9f91f6eec15563) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2e79a85f43a26eb3002f89785004b3a0') in 0.022398 seconds
+  Import took 0.025894 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000203 seconds.
+  path: Assets/CyberCity/Textures/Concrete 9.png
+  artifactKey: Guid(93140050f01dc544a826a58bd6483b53) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/CyberCity/Textures/Concrete 9.png using Guid(93140050f01dc544a826a58bd6483b53) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fa1723d096384710108c1806f1037658') in 0.021190 seconds
+  Import took 0.024884 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000206 seconds.
+  path: Assets/CyberCity/Textures/Asphalt 2 S.tga
+  artifactKey: Guid(7a6c633a74776e74bab70a65b82aefa0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/CyberCity/Textures/Asphalt 2 S.tga using Guid(7a6c633a74776e74bab70a65b82aefa0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ffa145c755f2d168a164d75ae36159c4') in 0.016674 seconds
+  Import took 0.020263 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000205 seconds.
+  path: Assets/CyberCity/Textures/Asphalt 2 H.png
+  artifactKey: Guid(bbe8e5e68e5d4f64382e80d668fa79f8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/CyberCity/Textures/Asphalt 2 H.png using Guid(bbe8e5e68e5d4f64382e80d668fa79f8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ce7029ae95394e4e04d2a41f6e083cf2') in 0.024023 seconds
+  Import took 0.027480 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000225 seconds.
+  path: Assets/CyberCity/Textures/Concrete 1 N.png
+  artifactKey: Guid(1b39214bbb0c82941bcd741ddb999e4e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/CyberCity/Textures/Concrete 1 N.png using Guid(1b39214bbb0c82941bcd741ddb999e4e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a85ea683df6f279d6670d2be6870582d') in 0.024221 seconds
+  Import took 0.027740 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000231 seconds.
+  path: Assets/CyberCity/Textures/Concrete 8 N.png
+  artifactKey: Guid(17adc5c45a1b54f46b7757918bce3022) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/CyberCity/Textures/Concrete 8 N.png using Guid(17adc5c45a1b54f46b7757918bce3022) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bd17f892451b1c4250d3da4e4308f509') in 0.024201 seconds
+  Import took 0.027862 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000218 seconds.
+  path: Assets/CyberCity/Textures/antenna_NormalMap.png
+  artifactKey: Guid(79057886a82727f4b92ce536d7bc8a38) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/CyberCity/Textures/antenna_NormalMap.png using Guid(79057886a82727f4b92ce536d7bc8a38) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ed22f2c54e4d0a0f90de798d528d1b19') in 0.020353 seconds
+  Import took 0.024134 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000237 seconds.
+  path: Assets/CyberCity/Textures/Asphalt 1 S.tga
+  artifactKey: Guid(5986cfbe4ee3c9e40a744ad33080539f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/CyberCity/Textures/Asphalt 1 S.tga using Guid(5986cfbe4ee3c9e40a744ad33080539f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '989ccc46b9dafa65c5e4a05d0a07a245') in 0.016909 seconds
+  Import took 0.020409 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000212 seconds.
+  path: Assets/CyberCity/Textures/cable_Albedo.tga
+  artifactKey: Guid(e6f08992972f9e14d81e3aca9fcd3a93) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/CyberCity/Textures/cable_Albedo.tga using Guid(e6f08992972f9e14d81e3aca9fcd3a93) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '83a6b987bc118dd52c8ccbd535cdd2e1') in 0.021085 seconds
+  Import took 0.024686 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000221 seconds.
+  path: Assets/CyberCity/Textures/Asphalt 1 B N.png
+  artifactKey: Guid(80722ec131c71944a8f02434a5f0929e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/CyberCity/Textures/Asphalt 1 B N.png using Guid(80722ec131c71944a8f02434a5f0929e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5ac7179f797291ff2d4473efc0e814fa') in 0.976176 seconds
+  Import took 0.980010 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000280 seconds.
+  path: Assets/CyberCity/Textures/Concrete 7 S.tga
+  artifactKey: Guid(0a70c1400fba5da47852ba75938558ad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/CyberCity/Textures/Concrete 7 S.tga using Guid(0a70c1400fba5da47852ba75938558ad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '516b80af1fee9c97affb69d7bb40d386') in 0.016186 seconds
+  Import took 0.019628 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000187 seconds.
+  path: Assets/CyberCity/Textures/detail2_Specular.tga
+  artifactKey: Guid(0b9e238c6a0923f4ea4d2d756e51bd25) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/CyberCity/Textures/detail2_Specular.tga using Guid(0b9e238c6a0923f4ea4d2d756e51bd25) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'df0845072f6292c6deb65260f326cecb') in 0.022998 seconds
+  Import took 0.026622 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000209 seconds.
+  path: Assets/CyberCity/Textures/Asphalt 1 B H.png
+  artifactKey: Guid(74eb390599095064593614e0e75e533e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/CyberCity/Textures/Asphalt 1 B H.png using Guid(74eb390599095064593614e0e75e533e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '93892c934541a0e6f0280d2eeb9842b4') in 0.022191 seconds
+  Import took 0.025797 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000221 seconds.
+  path: Assets/CyberCity/Textures/Asphalt 2 B N.png
+  artifactKey: Guid(faa5b74b8799f0c40afb1a71718b1c88) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/CyberCity/Textures/Asphalt 2 B N.png using Guid(faa5b74b8799f0c40afb1a71718b1c88) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'aecab86d975eb0297ae7208aafe5b2d9') in 0.024134 seconds
+  Import took 0.027818 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000221 seconds.
+  path: Assets/CyberCity/Textures/Concrete 5 N.png
+  artifactKey: Guid(d55be696521f6d34c85b6ad41f99adb2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/CyberCity/Textures/Concrete 5 N.png using Guid(d55be696521f6d34c85b6ad41f99adb2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a62079c663a8eabc6e90004c8067d4a9') in 0.022873 seconds
+  Import took 0.026704 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000225 seconds.
+  path: Assets/CyberCity/Textures/detail2_NormalMap.png
+  artifactKey: Guid(2f5d9851f26628740849ab22dfa80310) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/CyberCity/Textures/detail2_NormalMap.png using Guid(2f5d9851f26628740849ab22dfa80310) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fcaef30dc50af71774897bce43a56d35') in 0.023499 seconds
+  Import took 0.028035 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000233 seconds.
+  path: Assets/CyberCity/Textures/antenna_Specular.tga
+  artifactKey: Guid(8afcaa60679ecb84bb678d6dc5bf0fe8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/CyberCity/Textures/antenna_Specular.tga using Guid(8afcaa60679ecb84bb678d6dc5bf0fe8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bb18a5cb3326a392717eb48c30620858') in 0.021046 seconds
+  Import took 0.025077 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000228 seconds.
+  path: Assets/CyberCity/Textures/Asphalt 2 B S.tga
+  artifactKey: Guid(7222f8e36c662484fb712a6042eec39f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/CyberCity/Textures/Asphalt 2 B S.tga using Guid(7222f8e36c662484fb712a6042eec39f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6689adde784a3133f9050d9c32233ce6') in 0.017260 seconds
+  Import took 0.020960 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000224 seconds.
+  path: Assets/CyberCity/Textures/Concrete 3 N.png
+  artifactKey: Guid(efd06180ed0abaf4a8049f1697a9ed7e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/CyberCity/Textures/Concrete 3 N.png using Guid(efd06180ed0abaf4a8049f1697a9ed7e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '42332b594905fc2e019789a4ad55b603') in 0.021454 seconds
+  Import took 0.025913 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000206 seconds.
+  path: Assets/CyberCity/Textures/Concrete 5 S.tga
+  artifactKey: Guid(ad3229cf372892042a9b08dd38971f7c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/CyberCity/Textures/Concrete 5 S.tga using Guid(ad3229cf372892042a9b08dd38971f7c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f73b451d7cd22b8672c652d8f458392a') in 0.014611 seconds
+  Import took 0.018285 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000215 seconds.
+  path: Assets/CyberCity/Textures/cable_NormalMap.png
+  artifactKey: Guid(c132494533fadb84c99e26b596dfd289) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/CyberCity/Textures/cable_NormalMap.png using Guid(c132494533fadb84c99e26b596dfd289) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9fb326f153948fd24be4cb5969110ad3') in 0.101874 seconds
+  Import took 0.105637 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000250 seconds.
+  path: Assets/CyberCity/Textures/Asphalt 1 H.png
+  artifactKey: Guid(0f8ffff8268cdfd4aa9acefe6765a288) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/CyberCity/Textures/Asphalt 1 H.png using Guid(0f8ffff8268cdfd4aa9acefe6765a288) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5023dd0064fa07787fcbb509290f5fe4') in 0.021110 seconds
+  Import took 0.024673 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000196 seconds.
+  path: Assets/CyberCity/Textures/Concrete 8.png
+  artifactKey: Guid(4806be9d5e964bf419fd5272725a574f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/CyberCity/Textures/Concrete 8.png using Guid(4806be9d5e964bf419fd5272725a574f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4d709ea1f2748ac134a8f06b7a54741e') in 0.021371 seconds
+  Import took 0.024846 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000219 seconds.
+  path: Assets/CyberCity/Textures/Concrete 10 c H.png
+  artifactKey: Guid(b911986d90b166f439d44f58e91f2cb4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/CyberCity/Textures/Concrete 10 c H.png using Guid(b911986d90b166f439d44f58e91f2cb4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8c297fc6a552c9f85c7320b55d3aed3d') in 0.020388 seconds
+  Import took 0.024210 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000255 seconds.
+  path: Assets/CyberCity/Textures/detail2_Albedo.tga
+  artifactKey: Guid(a243e252955d83f48b5fdbccbb481f74) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/CyberCity/Textures/detail2_Albedo.tga using Guid(a243e252955d83f48b5fdbccbb481f74) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8b84730d1b0589b2937fa134e8e37b39') in 0.022193 seconds
+  Import took 0.025930 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000217 seconds.
+  path: Assets/CyberCity/Textures/antenna_Emission.png
+  artifactKey: Guid(5fa2f790f8148d3479660b72cd8d0240) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/CyberCity/Textures/antenna_Emission.png using Guid(5fa2f790f8148d3479660b72cd8d0240) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '858c9cbd2ee4d92358f4d48bb91a51ea') in 0.018766 seconds
+  Import took 0.022471 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000223 seconds.
+  path: Assets/CyberCity/Textures/Asphalt 1 B.png
+  artifactKey: Guid(bc8376c6e37b32a499987d9984d94655) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/CyberCity/Textures/Asphalt 1 B.png using Guid(bc8376c6e37b32a499987d9984d94655) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a18cb593161f9286a792e71cd63c8e23') in 0.022188 seconds
+  Import took 0.026406 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000257 seconds.
+  path: Assets/CyberCity/Textures/Concrete 10 c N.png
+  artifactKey: Guid(8d1a5977b15d147468258103d4e882ba) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/CyberCity/Textures/Concrete 10 c N.png using Guid(8d1a5977b15d147468258103d4e882ba) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ee994a56378ecbf79beda822e9d11cb4') in 0.024800 seconds
+  Import took 0.073405 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000231 seconds.
+  path: Assets/CyberCity/Textures/Concrete 10 c.png
+  artifactKey: Guid(1ca6e30ecc638ea4db63452aa3ef3bcf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/CyberCity/Textures/Concrete 10 c.png using Guid(1ca6e30ecc638ea4db63452aa3ef3bcf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bf2b26ddb1b2a2a7fb65c561cb0508d0') in 0.021355 seconds
+  Import took 0.025027 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000217 seconds.
+  path: Assets/CyberCity/Textures/Concrete 1.png
+  artifactKey: Guid(7ab3745d1ce297b44bdee3ee119f946a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/CyberCity/Textures/Concrete 1.png using Guid(7ab3745d1ce297b44bdee3ee119f946a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6facb21c5c962d75c681664ded72d4a9') in 0.021670 seconds
+  Import took 0.025332 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000222 seconds.
+  path: Assets/CyberCity/Textures/Concrete 3 S.tga
+  artifactKey: Guid(f22f77af16da10749b94f50947df28c8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/CyberCity/Textures/Concrete 3 S.tga using Guid(f22f77af16da10749b94f50947df28c8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd4c0a80baf265ff8177f810075b4be60') in 0.014964 seconds
+  Import took 0.019442 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000240 seconds.
+  path: Assets/CyberCity/Textures/curtain.tga
+  artifactKey: Guid(6b0bfd2c4d47491409c42de6d7d0cebf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/CyberCity/Textures/curtain.tga using Guid(6b0bfd2c4d47491409c42de6d7d0cebf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9b052ac70d2f537ba4ace7eb04e11704') in 0.020212 seconds
+  Import took 0.023827 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000212 seconds.
+  path: Assets/CyberCity/Textures/Asphalt 2 B H.png
+  artifactKey: Guid(8ffe00dd370961640a29559a7925283d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/CyberCity/Textures/Asphalt 2 B H.png using Guid(8ffe00dd370961640a29559a7925283d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5eebf0bc493236ab7ba8ed89cacc8378') in 0.022257 seconds
+  Import took 0.025726 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000224 seconds.
+  path: Assets/CyberCity/Textures/dirty.psd
+  artifactKey: Guid(fab9f9671ef38584bb4eaad6feac46bd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/CyberCity/Textures/dirty.psd using Guid(fab9f9671ef38584bb4eaad6feac46bd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8e7ce4afec855bb463feb2203a52796a') in 0.023670 seconds
+  Import took 0.027426 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000217 seconds.
+  path: Assets/CyberCity/Textures/Concrete 7 N.png
+  artifactKey: Guid(b0de4c3e029ba7e499d2f880b56896fc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/CyberCity/Textures/Concrete 7 N.png using Guid(b0de4c3e029ba7e499d2f880b56896fc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '56f8a46c93050af78f67b2e540b8fcb2') in 0.023744 seconds
+  Import took 0.027264 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000228 seconds.
+  path: Assets/CyberCity/Textures/curtain N.png
+  artifactKey: Guid(5557387fc26daca4a93b1568b71c4469) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/CyberCity/Textures/curtain N.png using Guid(5557387fc26daca4a93b1568b71c4469) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '484ebec22cefa19e9bfb7cdf6a7ba88a') in 0.020769 seconds
+  Import took 0.025210 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000253 seconds.
+  path: Assets/CyberCity/Textures/Concrete 6.png
+  artifactKey: Guid(e9880b6c223d1ba43a12574a3a6bf3ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/CyberCity/Textures/Concrete 6.png using Guid(e9880b6c223d1ba43a12574a3a6bf3ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4467877314cce359c701afc9d2669698') in 0.020825 seconds
+  Import took 0.025322 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000235 seconds.
+  path: Assets/CyberCity/Textures/Concrete 7.png
+  artifactKey: Guid(25fa14c64b68cbd43b0c7ed8c2b2330c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/CyberCity/Textures/Concrete 7.png using Guid(25fa14c64b68cbd43b0c7ed8c2b2330c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bca8aaf7ea06f35b30496860bcd42a05') in 0.021199 seconds
+  Import took 0.025274 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000193 seconds.
+  path: Assets/CyberCity/Textures/curtain S.tga
+  artifactKey: Guid(0336f89f99c949f428951f298e1d8d75) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/CyberCity/Textures/curtain S.tga using Guid(0336f89f99c949f428951f298e1d8d75) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '99f054341891bff9db8839989ad758d0') in 0.014946 seconds
+  Import took 0.018630 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000269 seconds.
+  path: Assets/CyberCity/Textures/Asphalt 2 N.png
+  artifactKey: Guid(c540ce77d2f0179439753d910a0171c1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/CyberCity/Textures/Asphalt 2 N.png using Guid(c540ce77d2f0179439753d910a0171c1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f20ab9e17523e2610e0b0dc222d825ee') in 0.025260 seconds
+  Import took 0.029130 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000206 seconds.
+  path: Assets/CyberCity/Textures/Asphalt 2 cross b.png
+  artifactKey: Guid(f89802dc67e5b77459c18cd204d46df4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/CyberCity/Textures/Asphalt 2 cross b.png using Guid(f89802dc67e5b77459c18cd204d46df4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9d522b5fab93f4c0253e553fc97e3e8e') in 0.021305 seconds
+  Import took 0.024808 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000213 seconds.
+  path: Assets/CyberCity/Textures/Concrete 8 S.tga
+  artifactKey: Guid(aea265a4eb7b50f4780c72535060075d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/CyberCity/Textures/Concrete 8 S.tga using Guid(aea265a4eb7b50f4780c72535060075d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dd67e7bfa88f1d13b683ac23ef6daa45') in 0.016731 seconds
+  Import took 0.020640 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000213 seconds.
+  path: Assets/CyberCity/Textures/Concrete 9 H.png
+  artifactKey: Guid(d76d4875c473a25409b7c4da9623c81c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/CyberCity/Textures/Concrete 9 H.png using Guid(d76d4875c473a25409b7c4da9623c81c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1a57f27eb3490eb27f6f16b890748746') in 0.020475 seconds
+  Import took 0.024030 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000201 seconds.
+  path: Assets/CyberCity/Textures/Asphalt 2 cross a.png
+  artifactKey: Guid(03984e36faa72b245874084d0a9cb3b7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/CyberCity/Textures/Asphalt 2 cross a.png using Guid(03984e36faa72b245874084d0a9cb3b7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2cfb8bc44742c54693cf7bcb3f6f772c') in 0.021948 seconds
+  Import took 0.025738 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.034536 seconds.
+  path: Assets/CyberCity/city 2019.unity
+  artifactKey: Guid(89316b14a89525e4bb1641cabfd61344) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/CyberCity/city 2019.unity using Guid(89316b14a89525e4bb1641cabfd61344) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '89763318b4e801f9943d9549131f2d67') in 0.009839 seconds
+  Import took 0.013090 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 260.824205 seconds.
+  path: Assets/Scenes
+  artifactKey: Guid(b54d64bb44471174496e11c3087380f7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes using Guid(b54d64bb44471174496e11c3087380f7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '828dee055b09817008b65dd965a01e34') in 0.013744 seconds
+  Import took 0.018948 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.139607 seconds.
+  path: Assets/Scenes/SampleScene.unity
+  artifactKey: Guid(9fc0d4010bbf28b4594072e72b8655ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/SampleScene.unity using Guid(9fc0d4010bbf28b4594072e72b8655ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5bfec2312256b10d126267fa0ced7a24') in 0.013452 seconds
+  Import took 0.017865 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 49.424188 seconds.
+  path: Assets/CyberCity/Editor
+  artifactKey: Guid(541a9c9b646892c478b33a93162d50bf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/CyberCity/Editor using Guid(541a9c9b646892c478b33a93162d50bf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '03c91dc4c0f5ae0625f150c873fe1eb0') in 0.010067 seconds
+  Import took 0.013816 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.043780 seconds.
+  path: Assets/CyberCity/Editor/LogoDialog.png
+  artifactKey: Guid(aa952c4d07954ff408e8129641011ff3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/CyberCity/Editor/LogoDialog.png using Guid(aa952c4d07954ff408e8129641011ff3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e16d6b1eb1db0476c97cb7a92a866cc6') in 0.020827 seconds
+  Import took 0.025015 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.417928 seconds.
+  path: Assets/CyberCity/_HDRP
+  artifactKey: Guid(346d596108198834195719147e06ed4f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/CyberCity/_HDRP using Guid(346d596108198834195719147e06ed4f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '45b69a11e39cf485d390fde951e20f4f') in 0.010482 seconds
+  Import took 0.013736 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 5.445579 seconds.
+  path: Assets/CyberCity/_HDRP/SETUP.txt
+  artifactKey: Guid(b279c6139d27db44db5cd52d7de51346) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/CyberCity/_HDRP/SETUP.txt using Guid(b279c6139d27db44db5cd52d7de51346) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'db32b67bc503b942d83a6e21c4f058a5') in 0.015165 seconds
+  Import took 0.019170 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 25.543959 seconds.
+  path: Assets/CyberCity/PostProcessing
+  artifactKey: Guid(00b8841acba3e6f46a29a60711a64319) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/CyberCity/PostProcessing using Guid(00b8841acba3e6f46a29a60711a64319) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7841c36fed5dfd58e14121aa946207e4') in 0.009634 seconds
+  Import took 0.012901 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 4.151022 seconds.
+  path: Assets/CyberCity/PostProcessing/Utilities
+  artifactKey: Guid(478d405e757b044f2bd9c4b777026b7e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/CyberCity/PostProcessing/Utilities using Guid(478d405e757b044f2bd9c4b777026b7e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c4de35ed8a98d234e3c2ef1a92669795') in 0.010890 seconds
+  Import took 0.014061 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 11.338003 seconds.
+  path: Assets/Enemies/BattleDroids/textures/assault_ilum_mask.tga
+  artifactKey: Guid(285012d5c7a13584ebfe0939efe51d65) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Enemies/BattleDroids/textures/assault_ilum_mask.tga using Guid(285012d5c7a13584ebfe0939efe51d65) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '496d378625a8ff5e43cc17713f78269c') in 0.020534 seconds
+  Import took 0.024658 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000220 seconds.
+  path: Assets/Enemies/BattleDroids/textures/worker_ilum_mask.tga
+  artifactKey: Guid(75f647141a682e14e95c5d7d95542f3e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Enemies/BattleDroids/textures/worker_ilum_mask.tga using Guid(75f647141a682e14e95c5d7d95542f3e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5343d52946fd61c93d541dc4795e4c24') in 0.020092 seconds
+  Import took 0.023599 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000225 seconds.
+  path: Assets/CyberCity/Textures/night skbX.png
+  artifactKey: Guid(ebb6b348b34499f4b9021068bbda4f45) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/CyberCity/Textures/night skbX.png using Guid(ebb6b348b34499f4b9021068bbda4f45) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a962a40aa126772998027893d616a99b') in 0.035840 seconds
+  Import took 0.040729 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000262 seconds.
+  path: Assets/Enemies/BattleDroids/textures/melee_ilum_mask.tga
+  artifactKey: Guid(24144db8515d8f248a4db61efa70d619) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Enemies/BattleDroids/textures/melee_ilum_mask.tga using Guid(24144db8515d8f248a4db61efa70d619) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ab60af4a24b5c60aff090a2e32a0ef3e') in 0.019646 seconds
+  Import took 0.023637 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000293 seconds.
+  path: Assets/Enemies/BattleDroids/textures/heavy_ilum_mask.tga
+  artifactKey: Guid(0fe619d1a40b04743a9bf4f706f7808a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Enemies/BattleDroids/textures/heavy_ilum_mask.tga using Guid(0fe619d1a40b04743a9bf4f706f7808a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e974a552f4b387c29437ad90f52bca18') in 0.019820 seconds
+  Import took 0.023936 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000246 seconds.
+  path: Assets/CyberCity/Materials/night skbX.mat
+  artifactKey: Guid(7ee9f7fd9ac4a0d4cb877ca683267194) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/CyberCity/Materials/night skbX.mat using Guid(7ee9f7fd9ac4a0d4cb877ca683267194) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5ebccdc2bf0c2b6bf84ca19ec05fed25') in 0.070103 seconds
+  Import took 0.075063 seconds .
+
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file
