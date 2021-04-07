@@ -12,6 +12,7 @@ public class EnemyColissionCheck : MonoBehaviour
     private EnemyMovement enemyMovement;
     private EnemyShooting enemyShooting;
     private Vector3 lower = new Vector3 (100f, 100f, 100f);
+    private EnemyEvent enemyEvent;
 
     // Start is called before the first frame update
     void Start()
@@ -21,6 +22,7 @@ public class EnemyColissionCheck : MonoBehaviour
         animator = GetComponent<Animator>();
         enemyMovement = GetComponent<EnemyMovement>();
         enemyShooting = GetComponentInChildren<EnemyShooting>();
+        enemyEvent = FindObjectOfType<EnemyEvent>();
     }
 
     // Update is called once per frame
@@ -32,6 +34,7 @@ public class EnemyColissionCheck : MonoBehaviour
         }
         if (Vector3.Distance(lower, gameObject.transform.position) < 1f)
         {
+            enemyEvent.EnemyCount(1);
             Destroy(gameObject);
         }
     }
@@ -63,4 +66,5 @@ public class EnemyColissionCheck : MonoBehaviour
     {
         currentHealth = currentHealth - damage;
     }
+
 }
