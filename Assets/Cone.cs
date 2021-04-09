@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class Cone : MonoBehaviour
 {
-    private EnemyEvent enemyEvent;
+    private AchievementManager achive;
     private int hitCount;
 
     // Start is called before the first frame update
     void Start()
     {
-        enemyEvent = FindObjectOfType<EnemyEvent>();
+        achive = FindObjectOfType<AchievementManager>();
     }
 
     public void ConeHit(int hit)
@@ -18,7 +18,7 @@ public class Cone : MonoBehaviour
         hitCount = hitCount + hit;
         if(hitCount == 1)
         {
-            enemyEvent.ConeAchive(1);
+            achive.ConeAchive(1);
         }
     }
 }

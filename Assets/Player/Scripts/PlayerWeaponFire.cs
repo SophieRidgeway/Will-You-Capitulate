@@ -26,6 +26,7 @@ public class PlayerWeaponFire : MonoBehaviour
             StartCoroutine(LineLife());
             ShootDamage();
             Triffic();
+            Pizza();
 
         }
         else
@@ -62,6 +63,15 @@ public class PlayerWeaponFire : MonoBehaviour
         if (cone != null)
         {
             cone.ConeHit(1);
+        }
+    }
+
+    private void Pizza()
+    {
+        PizzaTime pizza = hit.transform.GetComponent<PizzaTime>();
+        if(pizza != null)
+        {
+            pizza.PizzaHit(1);
         }
     }
 

@@ -1237,7 +1237,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 55cd00fad307c3042b2ff15114c66b8a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MaxHealth: 5
+  MaxHealth: 3
 --- !u!114 &1901738706306137603
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1382,7 +1382,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shotDelay: 0.5
-  damage: 0
+  damage: 1
   hitRange: 100
   line: {fileID: 6465753312428314920}
 --- !u!1 &1901738707950397167

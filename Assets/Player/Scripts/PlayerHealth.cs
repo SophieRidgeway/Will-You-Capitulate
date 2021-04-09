@@ -16,12 +16,16 @@ public class PlayerHealth : MonoBehaviour
     private CharacterAiming characterAiming;
     private Animator animator;
     private int isDeadPar = Animator.StringToHash("IsDead");
+    private int halfHealth;
+    private bool regen;
+    private AchievementManager achievement;
 
     // Start is called before the first frame update
     void Awake()
     {
         healthBar = FindObjectOfType<HealthBar>();
         playerHealth = playerMaxHealth;
+        halfHealth = playerHealth / 2;
         healthBar.SetMaxHealth(playerHealth);
         StartCoroutine(RegenHealthTimer());
         Getters();
@@ -33,6 +37,7 @@ public class PlayerHealth : MonoBehaviour
         characterMovement = GetComponent<characterMovement>();
         characterAiming = GetComponent<CharacterAiming>();
         animator = GetComponent<Animator>();
+        achievement = FindObjectOfType<AchievementManager>();
     }
 
     // Update is called once per frame
@@ -44,7 +49,17 @@ public class PlayerHealth : MonoBehaviour
             death = true;
             animator.SetBool(isDeadPar, true);
             Disable();
+        }
 
+        if(playerHealth == 1)
+        {
+            print("Im dying");
+            regen = true;
+        }
+
+        if (playerHealth >= halfHealth && regen == true)
+        {
+            achievement.LifeFlash(true);
         }
     }
 

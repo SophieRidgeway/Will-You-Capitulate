@@ -12,7 +12,7 @@ public class EnemyColissionCheck : MonoBehaviour
     private EnemyMovement enemyMovement;
     private EnemyShooting enemyShooting;
     private Vector3 lower = new Vector3 (100f, 100f, 100f);
-    private EnemyEvent enemyEvent;
+    private AchievementManager enemyEvent;
 
     // Start is called before the first frame update
     void Start()
@@ -22,7 +22,7 @@ public class EnemyColissionCheck : MonoBehaviour
         animator = GetComponent<Animator>();
         enemyMovement = GetComponent<EnemyMovement>();
         enemyShooting = GetComponentInChildren<EnemyShooting>();
-        enemyEvent = FindObjectOfType<EnemyEvent>();
+        enemyEvent = FindObjectOfType<AchievementManager>();
     }
 
     // Update is called once per frame
