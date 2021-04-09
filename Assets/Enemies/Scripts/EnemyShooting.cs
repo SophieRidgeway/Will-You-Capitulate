@@ -63,7 +63,6 @@ public class EnemyShooting : MonoBehaviour
         PlayerHealth player = hit.transform.GetComponent<PlayerHealth>();
         if (player != null)
         {
-            print("called");
             playerHealth.TakeDamage(damage);
         }
     }

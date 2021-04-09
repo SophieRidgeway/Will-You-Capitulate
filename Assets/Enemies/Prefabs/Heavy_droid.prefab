@@ -1207,7 +1207,7 @@ CapsuleCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1901738707571402878}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: 0.5
   m_Height: 1.9098269
@@ -1382,7 +1382,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shotDelay: 0.5
-  damage: 0.2
+  damage: 0
   hitRange: 100
   line: {fileID: 6465753312428314920}
 --- !u!1 &1901738707950397167

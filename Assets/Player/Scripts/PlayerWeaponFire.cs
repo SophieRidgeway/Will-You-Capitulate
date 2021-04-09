@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -9,7 +10,7 @@ public class PlayerWeaponFire : MonoBehaviour
     [SerializeField] LineRenderer line;
     [SerializeField] Transform bulletHole;
     [SerializeField] Camera camera;
-    [SerializeField] int damage = 5;
+    [SerializeField] int damage;
 
     private RaycastHit hit;
     public void Fire()
@@ -24,6 +25,7 @@ public class PlayerWeaponFire : MonoBehaviour
             LineManagement();
             StartCoroutine(LineLife());
             ShootDamage();
+            Triffic();
 
         }
         else
@@ -31,8 +33,6 @@ public class PlayerWeaponFire : MonoBehaviour
             line.enabled = false;
         }
     }
-
-
 
     private void HitEffect()
     {
@@ -53,6 +53,15 @@ public class PlayerWeaponFire : MonoBehaviour
         if (enemy != null)
         {
             enemy.TakeDamage(damage);
+        }
+    }
+
+    private void Triffic()
+    {
+        Cone cone = hit.transform.GetComponent<Cone>();
+        if (cone != null)
+        {
+            cone.ConeHit(1);
         }
     }
 

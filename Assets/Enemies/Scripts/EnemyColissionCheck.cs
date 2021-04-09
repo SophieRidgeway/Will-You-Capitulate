@@ -51,7 +51,6 @@ public class EnemyColissionCheck : MonoBehaviour
     {
         if(other.tag == "Player")
         {
-            print(gameObject.name + " Hit");
             currentHealth = currentHealth - 1;
         }
     }
