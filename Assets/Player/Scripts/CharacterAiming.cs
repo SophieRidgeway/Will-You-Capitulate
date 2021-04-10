@@ -20,20 +20,30 @@ public class CharacterAiming : MonoBehaviour
     private bool notSprint;
     private PowerBar powerBar;
     private int currentShots;
+    private AchievementManager achievement;
 
     // Start is called before the first frame update
     void Start()
     {
         mainCamera = Camera.main;
-        Cursor.visible = false;
-        Cursor.lockState = CursorLockMode.Locked;
         weaponFire = GetComponentInChildren<PlayerWeaponFire>();
         animator = GetComponent<Animator>();
         powerBar = FindObjectOfType<PowerBar>();
         currentShots = maxShots;
         powerBar.SetMaxPower(maxShots);
+        achievement = FindObjectOfType<AchievementManager>();
         StartCoroutine(RegenPowerTimer());
     }
+
+    public void Cursure(bool hide)
+    {
+        if(hide == true)
+        {
+            Cursor.visible = false;
+            Cursor.lockState = CursorLockMode.Locked;
+        }
+    }
+
     IEnumerator RegenPowerTimer()
     {
         while(true)
@@ -74,24 +84,26 @@ public class CharacterAiming : MonoBehaviour
 
     private void Update()
     {
-        isAimming = Input.GetMouseButton(1);
-
-
-        if (isAimming && notSprint == true)
+       if(achievement.GameInSession() == true)
         {
-            animator.SetBool(isAimingParam, isAimming);
-        }
-        else
-        {
-            animator.SetBool(isAimingParam, false);
-        }
+            isAimming = Input.GetMouseButton(1);
 
-        if (Input.GetButtonDown("Fire1") && fireOk == true && currentShots > 0)
-        {
-            weaponFire.Fire();
-            currentShots = currentShots - 1;
-            powerBar.SetSliderValue(currentShots);
-        }
 
+            if (isAimming && notSprint == true)
+            {
+                animator.SetBool(isAimingParam, isAimming);
+            }
+            else
+            {
+                animator.SetBool(isAimingParam, false);
+            }
+
+            if (Input.GetButtonDown("Fire1") && fireOk == true && currentShots > 0)
+            {
+                weaponFire.Fire();
+                currentShots = currentShots - 1;
+                powerBar.SetSliderValue(currentShots);
+            }
+        }
     }
 }

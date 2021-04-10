@@ -25,6 +25,7 @@ public class characterMovement : MonoBehaviour
     private bool isJumping;
     private int isSprintingParam = Animator.StringToHash("isSprinting");
     private CharacterAiming characterAiming;
+    private AchievementManager achievement;
 
     // Start is called before the first frame update
     void Start()
@@ -32,22 +33,26 @@ public class characterMovement : MonoBehaviour
         animator = GetComponent<Animator>();
         charCon = GetComponent<CharacterController>();
         characterAiming = GetComponentInChildren<CharacterAiming>();
+        achievement = FindObjectOfType<AchievementManager>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        input.x = Input.GetAxis("Horizontal");
-        input.y = Input.GetAxis("Vertical");
-
-        animator.SetFloat("InputX", input.x);
-        animator.SetFloat("InputY", input.y);
-
-        UpdateIsSprinting();
-
-        if(Input.GetKeyDown(KeyCode.Space))
+       if(achievement.GameInSession() == true)
         {
-            Jump();
+            input.x = Input.GetAxis("Horizontal");
+            input.y = Input.GetAxis("Vertical");
+
+            animator.SetFloat("InputX", input.x);
+            animator.SetFloat("InputY", input.y);
+
+            UpdateIsSprinting();
+
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                Jump();
+            }
         }
     }
 
@@ -84,13 +89,16 @@ public class characterMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if(isJumping)//In air
+       if(achievement.GameInSession() == true)
         {
-            InAir();
-        }
-        else 
-        {
-            OnGround();
+            if (isJumping)//In air
+            {
+                InAir();
+            }
+            else
+            {
+                OnGround();
+            }
         }
     }
 

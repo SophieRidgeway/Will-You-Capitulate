@@ -3,9 +3,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Random = UnityEngine.Random;
+using UnityEngine.UI;
 
 public class AchievementManager : MonoBehaviour
 {
+    public GameObject hatUnlockedCan;
+    public GameObject welcomeScreen;
+
     private GameObject crown;
     private GameObject magicHat;
     private GameObject cowboy;
@@ -25,12 +29,18 @@ public class AchievementManager : MonoBehaviour
     private bool killedAllHat = false;
     private bool Killed9Hat = false;
     private int hatDrop;
+    private bool lifeFlashedClaimed = false;
+    private bool pizzaHatClaimed = false;
+    private bool secretRoomClaimed = false;
+    private bool hasStartedGame = false;
+    private CharacterAiming characterAiming;
 
     private List<GameObject> hats = new List<GameObject>();
 
     // Start is called before the first frame update
     void Start()
     {
+        characterAiming = FindObjectOfType<CharacterAiming>();
         var badGuys = FindObjectsOfType<EnemyMovement>();
         enemieCount = badGuys.Length;
         tempGameObject = new GameObject();
@@ -38,6 +48,16 @@ public class AchievementManager : MonoBehaviour
         killedFirstFour = false;
         hatDrop = Random.Range(1, 10);
         FindHats();
+    }
+
+    private void StartGame()
+    {
+        if(Input.GetKeyDown(KeyCode.Return) && hasStartedGame == false)
+        {
+            hasStartedGame = true;
+            welcomeScreen.SetActive(false);
+            characterAiming.Cursure(true);
+        }
     }
 
     private void FindHats()
@@ -55,10 +75,14 @@ public class AchievementManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        CycleHats();
-        First4Down();
-        killed9Enemies();
-        KilledAll();
+        StartGame();
+        if(hasStartedGame)
+        {
+            CycleHats();
+            First4Down();
+            killed9Enemies();
+            KilledAll();
+        }
     }
 
     private void First4Down()
@@ -67,6 +91,7 @@ public class AchievementManager : MonoBehaviour
         {
             hats.Clear();
             hats.Add(cowboy);
+            ShowHatUnlocked(true);
             killedFirstFour = true;
         }
     }
@@ -78,6 +103,7 @@ public class AchievementManager : MonoBehaviour
             if(hatDrop <= 4)
             {
                 hats.Add(shower);
+                ShowHatUnlocked(true);
                 Killed9Hat = true;
             }
         }
@@ -88,6 +114,7 @@ public class AchievementManager : MonoBehaviour
         if(enemieCount == 0 && killedAllHat == false)
         {
             hats.Add(crown);
+            ShowHatUnlocked(true);
             killedAllHat = true;
         }
     }
@@ -132,43 +159,41 @@ public class AchievementManager : MonoBehaviour
     public void ConeAchive(int cones)
     {
         coneAmount = coneAmount + cones;
-        if (coneAmount == 4)
+        if (coneAmount == 8)
         {
             hats.Add(miner);
+            ShowHatUnlocked(true);
         }
 
     }
 
     public void PizzaHat(bool pizza)
     {
-        bool claimed = false;
-
-        if (pizza == true && claimed == false)
+        if (pizza == true && pizzaHatClaimed == false)
         {
             hats.Add(police);
-            claimed = true;
+            ShowHatUnlocked(true);
+            pizzaHatClaimed = true;
         }
     }
 
     public void SecretRoomEntered(bool entered)
     {
-        bool claimed = false;
-
-        if(entered == true && claimed == false)
+        if(entered == true && secretRoomClaimed == false)
         {
             hats.Add(magicHat);
-            claimed = true;
+            ShowHatUnlocked(true);
+            secretRoomClaimed = true;
         }
     }
 
     public void LifeFlash(bool flashed)
     {
-        bool clamied = false;
-
-        if(flashed == true && clamied == false)
+        if(flashed == true && lifeFlashedClaimed == false)
         {
             hats.Add(viking);
-            clamied = true;
+            ShowHatUnlocked(true);
+            lifeFlashedClaimed = true;
         }
     }
 
@@ -178,6 +203,29 @@ public class AchievementManager : MonoBehaviour
          if(robotHeadCollectio == 5)
         {
             hats.Add(sombrero);
+            ShowHatUnlocked(true);
         }
+    }
+
+    public void ShowHatUnlocked(bool show)
+    {
+        print("Called canvas");
+        if (show == true)
+        {
+            StartCoroutine(DisableCanvas());
+            hatUnlockedCan.SetActive(true);
+            show = false;
+        }
+    }
+
+    IEnumerator DisableCanvas()
+    {
+        yield return new WaitForSeconds(3f);
+        hatUnlockedCan.SetActive(false);
+    }
+
+    public bool GameInSession()
+    {
+        return hasStartedGame;
     }
 }
