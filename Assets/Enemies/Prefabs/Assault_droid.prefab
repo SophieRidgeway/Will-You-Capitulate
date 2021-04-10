@@ -1321,7 +1321,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shotDelay: 3
-  damage: 1
+  damage: 2
   hitRange: 100
   line: {fileID: 5126166439621510306}
 --- !u!1001 &359549174525668476

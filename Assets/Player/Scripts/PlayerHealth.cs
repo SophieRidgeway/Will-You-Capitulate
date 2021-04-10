@@ -74,7 +74,7 @@ public class PlayerHealth : MonoBehaviour
     {
         while (true)
         {
-            yield return new WaitForSeconds(8f);
+            yield return new WaitForSeconds(4f);
             RegenHealth();
         }
     }

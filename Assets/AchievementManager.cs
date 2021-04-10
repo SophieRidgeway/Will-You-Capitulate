@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class AchievementManager : MonoBehaviour
 {
@@ -21,6 +22,9 @@ public class AchievementManager : MonoBehaviour
     private GameObject tempGameObject;
     private bool killedFirstFour;
     private int robotHeadCollectio;
+    private bool killedAllHat = false;
+    private bool Killed9Hat = false;
+    private int hatDrop;
 
     private List<GameObject> hats = new List<GameObject>();
 
@@ -32,9 +36,8 @@ public class AchievementManager : MonoBehaviour
         tempGameObject = new GameObject();
         hats.Add(tempGameObject);
         killedFirstFour = false;
+        hatDrop = Random.Range(1, 10);
         FindHats();
-
-        //AddToListOfHats();
     }
 
     private void FindHats()
@@ -49,28 +52,43 @@ public class AchievementManager : MonoBehaviour
         viking = GameObject.Find("Cyborg/Hips/Spine/Spine1/Spine2/Neck/Head/VikingHelmet");
     }
 
-    private void AddToListOfHats()
-    {
-        hats.Add(crown);
-        //hats.Add(magicHat);
-        //hats.Add(cowboy);
-        //hats.Add(miner);
-        //hats.Add(police);
-        hats.Add(shower);
-        //hats.Add(sombrero);
-        //hats.Add(viking);
-    }
-
     // Update is called once per frame
     void Update()
     {
         CycleHats();
+        First4Down();
+        killed9Enemies();
+        KilledAll();
+    }
 
-        if (enemieCount == 4 && killedFirstFour == false)
+    private void First4Down()
+    {
+        if (enemieCount == 13 && killedFirstFour == false)
         {
             hats.Clear();
             hats.Add(cowboy);
             killedFirstFour = true;
+        }
+    }
+
+    private void killed9Enemies()
+    {
+        if (enemieCount == 8 && Killed9Hat == false)
+        {
+            if(hatDrop <= 4)
+            {
+                hats.Add(shower);
+                Killed9Hat = true;
+            }
+        }
+    }
+
+    private void KilledAll()
+    {
+        if(enemieCount == 0 && killedAllHat == false)
+        {
+            hats.Add(crown);
+            killedAllHat = true;
         }
     }
 
