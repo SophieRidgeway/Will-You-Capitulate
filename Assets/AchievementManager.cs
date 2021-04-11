@@ -7,6 +7,7 @@ using Random = UnityEngine.Random;
 
 public class AchievementManager : MonoBehaviour
 {
+    [SerializeField] bool PlayingHatVersion = false;
     [SerializeField] GameObject hatUnlockedCan;
     [SerializeField] GameObject welcomeScreen;
     [SerializeField] GameObject exitLight;
@@ -53,26 +54,29 @@ public class AchievementManager : MonoBehaviour
         gameRestart = FindObjectOfType<GameRestartManager>();
         var badGuys = FindObjectsOfType<EnemyMovement>();
         enemieCount = badGuys.Length;
-        tempGameObject = new GameObject();
-        hats.Add(tempGameObject);
         killedFirstFour = false;
-        hatDrop = Random.Range(1, 10);
-        FindHats();
+        if(PlayingHatVersion == true)
+        {
+            tempGameObject = new GameObject();
+            hats.Add(tempGameObject);
+            hatDrop = Random.Range(1, 10);
+            FindHats();
+        }
     }
 
     private void StartGame()
     {
-        if(gameRestart.NoWelcomeScreen() == true)
+        if(gameRestart.NoWelcomeScreen() == true && PlayingHatVersion == true)
         {
-            PlayGame();
+            PlayGameHat();
         }
-        else if (Input.GetKeyDown(KeyCode.Return) && hasStartedGame == false)
+        else if (Input.GetKeyDown(KeyCode.Return) && hasStartedGame == false && PlayingHatVersion == true)
         {
-            PlayGame();
+            PlayGameHat();
         }
     }
 
-    private void PlayGame()
+    private void PlayGameHat()
     {
         hasStartedGame = true;
         welcomeScreen.SetActive(false);
@@ -97,9 +101,12 @@ public class AchievementManager : MonoBehaviour
         StartGame();
         if(hasStartedGame)
         {
-            HelpMenu();
-            HatGuide();
-            CycleHats();
+            if(PlayingHatVersion == true)
+            {
+                HelpMenuHats();
+                HatGuide();
+                CycleHats();
+            }
             First4Down();
             killed9Enemies();
             KilledAll();
@@ -107,7 +114,7 @@ public class AchievementManager : MonoBehaviour
         }
     }
 
-    private void HelpMenu()
+    private void HelpMenuHats()
     {
         if (Input.GetKeyDown(KeyCode.L))
         {
@@ -140,16 +147,19 @@ public class AchievementManager : MonoBehaviour
     {
         if (enemieCount == 13 && killedFirstFour == false)
         {
-            hats.Clear();
-            hats.Add(cowboy);
-            ShowHatUnlocked(true);
+            if(PlayingHatVersion == true)
+            {
+                hats.Clear();
+                hats.Add(cowboy);
+                ShowHatUnlocked(true);
+            }
             killedFirstFour = true;
         }
     }
 
     private void killed9Enemies()
     {
-        if (enemieCount == 8 && Killed9Hat == false)
+        if (enemieCount == 8 && Killed9Hat == false && PlayingHatVersion == true)
         {
             if(hatDrop <= 4)
             {
@@ -164,9 +174,12 @@ public class AchievementManager : MonoBehaviour
     {
         if(enemieCount == 0 && killedAllHat == false)
         {
-            hats.Add(crown);
-            ShowHatUnlocked(true);
-            killedAllHat = true;
+            if(PlayingHatVersion == true)
+            {
+                hats.Add(crown);
+                ShowHatUnlocked(true);
+                killedAllHat = true;
+            }
             exitLight.SetActive(true);
             exitCollision.SetActive(true);
         }
@@ -224,8 +237,11 @@ public class AchievementManager : MonoBehaviour
         coneAmount = coneAmount + cones;
         if (coneAmount == 8)
         {
-            hats.Add(miner);
-            ShowHatUnlocked(true);
+            if(PlayingHatVersion == true)
+            {
+                hats.Add(miner);
+                ShowHatUnlocked(true);
+            }
         }
 
     }
@@ -234,8 +250,11 @@ public class AchievementManager : MonoBehaviour
     {
         if (pizza == true && pizzaHatClaimed == false)
         {
-            hats.Add(police);
-            ShowHatUnlocked(true);
+            if(PlayingHatVersion == true)
+            {
+                hats.Add(police);
+                ShowHatUnlocked(true);
+            }
             pizzaHatClaimed = true;
         }
     }
@@ -244,8 +263,11 @@ public class AchievementManager : MonoBehaviour
     {
         if(entered == true && secretRoomClaimed == false)
         {
-            hats.Add(magicHat);
-            ShowHatUnlocked(true);
+            if(PlayingHatVersion == true)
+            {
+                hats.Add(magicHat);
+                ShowHatUnlocked(true);
+            }
             secretRoomClaimed = true;
         }
     }
@@ -254,8 +276,11 @@ public class AchievementManager : MonoBehaviour
     {
         if(flashed == true && lifeFlashedClaimed == false)
         {
-            hats.Add(viking);
-            ShowHatUnlocked(true);
+            if(PlayingHatVersion == true)
+            {
+                hats.Add(viking);
+                ShowHatUnlocked(true);
+            }
             lifeFlashedClaimed = true;
         }
     }
@@ -265,8 +290,11 @@ public class AchievementManager : MonoBehaviour
         robotHeadCollectio = robotHeadCollectio + head;
          if(robotHeadCollectio == 5)
         {
-            hats.Add(sombrero);
-            ShowHatUnlocked(true);
+            if(PlayingHatVersion == true)
+            {
+                hats.Add(sombrero);
+                ShowHatUnlocked(true);
+            }
         }
     }
 
