@@ -6,11 +6,11 @@ using Random = UnityEngine.Random;
 
 public class AchievementManager : MonoBehaviour
 {
-    public GameObject hatUnlockedCan;
-    public GameObject welcomeScreen;
-    public GameObject exitLight;
-    public GameObject exitCollision;
-    public GameObject exitScreen;
+    [SerializeField] GameObject hatUnlockedCan;
+    [SerializeField] GameObject welcomeScreen;
+    [SerializeField] GameObject exitLight;
+    [SerializeField] GameObject exitCollision;
+    [SerializeField] GameObject exitScreen;
 
     private GameObject crown;
     private GameObject magicHat;
@@ -37,6 +37,7 @@ public class AchievementManager : MonoBehaviour
     private bool hasStartedGame = false;
     private CharacterAiming characterAiming;
     private bool isExiting = false;
+    private GameRestartManager gameRestart;
 
     private List<GameObject> hats = new List<GameObject>();
 
@@ -44,6 +45,7 @@ public class AchievementManager : MonoBehaviour
     void Start()
     {
         characterAiming = FindObjectOfType<CharacterAiming>();
+        gameRestart = FindObjectOfType<GameRestartManager>();
         var badGuys = FindObjectsOfType<EnemyMovement>();
         enemieCount = badGuys.Length;
         tempGameObject = new GameObject();
@@ -55,12 +57,21 @@ public class AchievementManager : MonoBehaviour
 
     private void StartGame()
     {
-        if(Input.GetKeyDown(KeyCode.Return) && hasStartedGame == false)
+        if(gameRestart.NoWelcomeScreen() == true)
         {
-            hasStartedGame = true;
-            welcomeScreen.SetActive(false);
-            characterAiming.Cursure(true);
+            PlayGame();
         }
+        else if (Input.GetKeyDown(KeyCode.Return) && hasStartedGame == false)
+        {
+            PlayGame();
+        }
+    }
+
+    private void PlayGame()
+    {
+        hasStartedGame = true;
+        welcomeScreen.SetActive(false);
+        characterAiming.Cursure(true);
     }
 
     private void FindHats()

@@ -3,10 +3,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Animations.Rigging;
+using UnityEngine.SceneManagement;
 
 public class PlayerHealth : MonoBehaviour
 {
     [SerializeField] int playerMaxHealth;
+    [SerializeField] GameObject gameOver;
 
     private HealthBar healthBar;
     private int playerHealth;
@@ -19,6 +21,7 @@ public class PlayerHealth : MonoBehaviour
     private int halfHealth;
     private bool regen;
     private AchievementManager achievement;
+    private GameRestartManager gameRestart;
 
     // Start is called before the first frame update
     void Awake()
@@ -38,6 +41,7 @@ public class PlayerHealth : MonoBehaviour
         characterAiming = GetComponent<CharacterAiming>();
         animator = GetComponent<Animator>();
         achievement = FindObjectOfType<AchievementManager>();
+        gameRestart = FindObjectOfType<GameRestartManager>();
     }
 
     // Update is called once per frame
@@ -68,6 +72,19 @@ public class PlayerHealth : MonoBehaviour
         rigBuilder.enabled = false;
         characterMovement.enabled = false;
         characterAiming.enabled = false;
+        achievement.enabled = false;
+        StartCoroutine(GameOverScreenWait());
+    }
+
+    IEnumerator GameOverScreenWait()
+    {
+        yield return new WaitForSeconds(3f);
+        gameOver.SetActive(true);
+        if(Input.GetKeyDown(KeyCode.Return))
+        {
+            gameRestart.GameReset(true);
+            SceneManager.LoadScene(0);
+        }
     }
 
     IEnumerator RegenHealthTimer()
