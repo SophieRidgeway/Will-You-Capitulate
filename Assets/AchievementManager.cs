@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using Random = UnityEngine.Random;
 
 public class AchievementManager : MonoBehaviour
@@ -11,6 +12,8 @@ public class AchievementManager : MonoBehaviour
     [SerializeField] GameObject exitLight;
     [SerializeField] GameObject exitCollision;
     [SerializeField] GameObject exitScreen;
+    [SerializeField] GameObject helpScreen;
+    [SerializeField] GameObject hatGuideCan;
 
     private GameObject crown;
     private GameObject magicHat;
@@ -38,6 +41,8 @@ public class AchievementManager : MonoBehaviour
     private CharacterAiming characterAiming;
     private bool isExiting = false;
     private GameRestartManager gameRestart;
+    private bool pauseGame = false;
+    private int enimeiesdead;
 
     private List<GameObject> hats = new List<GameObject>();
 
@@ -92,10 +97,42 @@ public class AchievementManager : MonoBehaviour
         StartGame();
         if(hasStartedGame)
         {
+            HelpMenu();
+            HatGuide();
             CycleHats();
             First4Down();
             killed9Enemies();
             KilledAll();
+            ResumeGame();
+        }
+    }
+
+    private void HelpMenu()
+    {
+        if (Input.GetKeyDown(KeyCode.L))
+        {
+            helpScreen.SetActive(true);
+            pauseGame = true;
+        }
+    }
+
+    private void HatGuide()
+    {
+        if(Input.GetKeyDown(KeyCode.P))
+        {
+            hatGuideCan.SetActive(true);
+            pauseGame = true;
+            UpdateHatText();
+        }
+    }
+
+    private void ResumeGame()
+    {
+        if(pauseGame == true && Input.GetKeyDown(KeyCode.Return))
+        {
+            helpScreen.SetActive(false);
+            hatGuideCan.SetActive(false);
+            pauseGame = false;
         }
     }
 
@@ -179,6 +216,7 @@ public class AchievementManager : MonoBehaviour
     public void EnemyCount(int death)
     {
         enemieCount = enemieCount - death;
+        enimeiesdead = enimeiesdead + death;
     }
 
     public void ConeAchive(int cones)
@@ -265,6 +303,76 @@ public class AchievementManager : MonoBehaviour
         if(exit == true)
         {
             Application.Quit();
+        }
+    }
+
+    public bool GamePaued()
+    {
+        return pauseGame;
+    }
+
+    private void UpdateHatText()
+    {
+        GameObject kill4Text = GameObject.Find("Kill4");
+        GameObject kill9Text = GameObject.Find("Kill9");
+        GameObject killedAllText = GameObject.Find("KilledAll");
+        GameObject robotText = GameObject.Find("RobotText");
+        GameObject traffic = GameObject.Find("TrafficText");
+        GameObject PizzaText = GameObject.Find("PizzaText");
+        GameObject secretText = GameObject.Find("Secret");
+        GameObject AlmostDead = GameObject.Find("AlmostDead");
+
+        if (killedFirstFour == false)
+        {
+            kill4Text.GetComponent<Text>().text = (enimeiesdead + "/4");
+        }
+        if(killedFirstFour == true)
+        {
+            kill4Text.GetComponent<Text>().text = ("Unlocked");
+        }
+        if(enimeiesdead >= 8 && Killed9Hat == false)
+        {
+            kill9Text.GetComponent<Text>().text = ("Luck failed you");
+        }
+        if(Killed9Hat == true)
+        {
+            kill9Text.GetComponent<Text>().text = ("Unlocked");
+        }
+        if (killedAllHat == true)
+        {
+            killedAllText.GetComponent<Text>().text = ("Unlocked");
+        }
+        if(robotHeadCollectio != 5)
+        {
+            robotText.GetComponent<Text>().text = (robotHeadCollectio + "/5");
+        }
+        if(robotHeadCollectio == 5)
+        {
+            robotText.GetComponent<Text>().text = ("Unlocked");
+        }
+        if(coneAmount != 8)
+        {
+            traffic.GetComponent<Text>().text = (coneAmount + "/8");
+        }
+        if(coneAmount >=8)
+        {
+            traffic.GetComponent<Text>().text = ("Unlocked");
+        }
+        if(pizzaHatClaimed == false)
+        {
+            PizzaText.GetComponent<Text>().text = ("Locked");
+        }
+        if(pizzaHatClaimed == true)
+        {
+            PizzaText.GetComponent<Text>().text = ("Unlocked");
+        }
+        if(secretRoomClaimed == true)
+        {
+            secretText.GetComponent<Text>().text = ("Unlocked");
+        }
+        if(lifeFlashedClaimed == true)
+        {
+            AlmostDead.GetComponent<Text>().text = ("Unlocked");
         }
     }
 }

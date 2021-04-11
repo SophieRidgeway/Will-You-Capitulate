@@ -27,6 +27,7 @@ public class EnemyMovement : MonoBehaviour
     private EnemyShooting enemyShooting;
     private PlayerHealth playerTest;
     private LookAtPlayer lookAtPlayer;
+    private AchievementManager achievement;
 
     private List<Transform> paths = new List<Transform>();
 
@@ -37,6 +38,7 @@ public class EnemyMovement : MonoBehaviour
         enemyShooting = GetComponentInChildren<EnemyShooting>();
         playerTest = FindObjectOfType<PlayerHealth>();
         lookAtPlayer = GetComponent<LookAtPlayer>();
+        achievement = FindObjectOfType<AchievementManager>();
 
         CreateList();
         PickWaitTime();
@@ -66,7 +68,7 @@ public class EnemyMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(playerTest.DeathCheck() == false)
+        if(playerTest.DeathCheck() == false && achievement.GamePaued() == false)
         {
             if (Vector3.Distance(paths[0].position, gameObject.transform.position) < radius)
             {

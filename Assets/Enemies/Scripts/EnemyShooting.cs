@@ -16,6 +16,7 @@ public class EnemyShooting : MonoBehaviour
     private int isShootingParam = Animator.StringToHash("IsShooting");
     private RaycastHit hit;
     private PlayerHealth playerHealth;
+    private AchievementManager achievement;
 
     // Start is called before the first frame update
     void Start()
@@ -23,6 +24,7 @@ public class EnemyShooting : MonoBehaviour
         StartCoroutine(TimeBetweenShoot());
         animator = GetComponentInParent<Animator>();
         playerHealth = FindObjectOfType<PlayerHealth>();
+        achievement = FindObjectOfType<AchievementManager>();
     }
 
     IEnumerator TimeBetweenShoot()
@@ -39,7 +41,7 @@ public class EnemyShooting : MonoBehaviour
     {
         var ray = new Ray(gameObject.transform.position, gameObject.transform.forward);
 
-        if (canShoot == true && moving == false && playerHealth.DeathCheck() == false)
+        if (canShoot == true && moving == false && playerHealth.DeathCheck() == false && achievement.GamePaued() == false)
         {
             if (Physics.Raycast(ray, out hit, hitRange))
             {

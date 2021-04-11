@@ -84,7 +84,7 @@ public class CharacterAiming : MonoBehaviour
 
     private void Update()
     {
-       if(achievement.GameInSession() == true)
+       if(achievement.GameInSession() == true && achievement.GamePaued() == false)
         {
             isAimming = Input.GetMouseButton(1);
 

@@ -39,7 +39,7 @@ public class characterMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       if(achievement.GameInSession() == true)
+       if(achievement.GameInSession() == true && achievement.GamePaued() == false)
         {
             input.x = Input.GetAxis("Horizontal");
             input.y = Input.GetAxis("Vertical");
