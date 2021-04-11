@@ -3,12 +3,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Random = UnityEngine.Random;
-using UnityEngine.UI;
 
 public class AchievementManager : MonoBehaviour
 {
     public GameObject hatUnlockedCan;
     public GameObject welcomeScreen;
+    public GameObject exitLight;
+    public GameObject exitCollision;
+    public GameObject exitScreen;
 
     private GameObject crown;
     private GameObject magicHat;
@@ -34,6 +36,7 @@ public class AchievementManager : MonoBehaviour
     private bool secretRoomClaimed = false;
     private bool hasStartedGame = false;
     private CharacterAiming characterAiming;
+    private bool isExiting = false;
 
     private List<GameObject> hats = new List<GameObject>();
 
@@ -116,6 +119,17 @@ public class AchievementManager : MonoBehaviour
             hats.Add(crown);
             ShowHatUnlocked(true);
             killedAllHat = true;
+            exitLight.SetActive(true);
+            exitCollision.SetActive(true);
+        }
+
+        if(isExiting == true)
+        {
+            exitScreen.SetActive(true);
+            if(Input.GetKey(KeyCode.Escape))
+            {
+                ExitApplication(true);
+            }
         }
     }
 
@@ -227,5 +241,19 @@ public class AchievementManager : MonoBehaviour
     public bool GameInSession()
     {
         return hasStartedGame;
+    }
+
+    public void CanExit(bool exit)
+    {
+        print("In The achivment script");
+        isExiting = exit;
+    }
+
+    private void ExitApplication(bool exit)
+    {
+        if(exit == true)
+        {
+            Application.Quit();
+        }
     }
 }
