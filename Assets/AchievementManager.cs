@@ -9,14 +9,17 @@ public class AchievementManager : MonoBehaviour
 {
     [SerializeField] bool PlayingHatVersion = false;
     [SerializeField] bool PlayingAcheivementVersion = false;
+    [SerializeField] bool PlayingNormalVersion = false;
     [SerializeField] GameObject hatUnlockedCan;
     [SerializeField] GameObject welcomeScreenHat;
     [SerializeField] GameObject welcomScreenAchive;
+    [SerializeField] GameObject welcomeScreenNormal;
     [SerializeField] GameObject exitLight;
     [SerializeField] GameObject exitCollision;
     [SerializeField] GameObject exitScreen;
     [SerializeField] GameObject helpScreen;
     [SerializeField] GameObject helpScreenAchivment;
+    [SerializeField] GameObject helpScreenNormal;
     [SerializeField] GameObject hatGuideCan;
     [SerializeField] GameObject achivGuideCan;
 
@@ -85,6 +88,11 @@ public class AchievementManager : MonoBehaviour
         {
             welcomScreenAchive.SetActive(true);
         }
+
+        if(PlayingNormalVersion == true)
+        {
+            welcomeScreenNormal.SetActive(true);
+        }
     }
 
 
@@ -102,6 +110,21 @@ public class AchievementManager : MonoBehaviour
         {
             PlayingAchivment();
         }
+        else if (gameRestart.NoWelcomeScreen() == true && PlayingAcheivementVersion == true)
+        {
+            PlayingAchivment();
+        }
+        else if (Input.GetKeyDown(KeyCode.Return) && hasStartedGame == false && PlayingNormalVersion == true)
+        {
+            PlayNormal();
+        }
+    }
+
+    private void PlayNormal()
+    {
+        hasStartedGame = true;
+        welcomeScreenNormal.SetActive(false);
+        characterAiming.Cursure(true);
     }
 
     private void PlayingAchivment()
@@ -153,6 +176,12 @@ public class AchievementManager : MonoBehaviour
                 HelpMenuAchive();
                 AchivmentGuide();
             }
+
+            if(PlayingNormalVersion == true)
+            {
+                HelpMenuNormal();
+            }
+
             First4Down();
             killed9Enemies();
             KilledAll();
@@ -198,6 +227,15 @@ public class AchievementManager : MonoBehaviour
         }
     }
 
+    private void HelpMenuNormal()
+    {
+        if (Input.GetKeyDown(KeyCode.L))
+        {
+            helpScreenNormal.SetActive(true);
+            pauseGame = true;
+        }
+    }
+
 
     private void ResumeGame()
     {
@@ -207,6 +245,7 @@ public class AchievementManager : MonoBehaviour
             hatGuideCan.SetActive(false);
             achivGuideCan.SetActive(false);
             helpScreenAchivment.SetActive(false);
+            helpScreenNormal.SetActive(false);
             pauseGame = false;
         }
     }
@@ -293,7 +332,7 @@ public class AchievementManager : MonoBehaviour
     private void GameEndingHandle()
     {
         exitScreen.SetActive(true);
-        if (PlayingHatVersion == true || PlayingAcheivementVersion == true)
+        if (PlayingHatVersion == true || PlayingAcheivementVersion == true || PlayingNormalVersion == true)
         {
             canTime = false;
             GameObject Complet = GameObject.Find("Complet");
@@ -301,17 +340,23 @@ public class AchievementManager : MonoBehaviour
             float minutes = Mathf.FloorToInt(timer / 60);
             float seconds = Mathf.FloorToInt(timer % 60);
 
-            Complet.SetActive(true);
             timeTook.SetActive(true);
             timeTook.GetComponent<Text>().text = ("You took " + (string.Format("{0:00}:{1:00}", minutes, seconds) + " to complet the mission"));
 
             if (PlayingHatVersion == true)
             {
+                Complet.SetActive(true);
                 Complet.GetComponent<Text>().text = ("You collected " + acomplishedamount + " out of 8 hats!");
             }
             if (PlayingAcheivementVersion == true)
             {
+                Complet.SetActive(true);
                 Complet.GetComponent<Text>().text = ("You completed " + acomplishedamount + " out of 8 achievments!");
+            }
+            if(PlayingNormalVersion == true)
+            {
+                Complet.SetActive(true);
+                Complet.GetComponent<Text>().text = ("       ");
             }
         }
     }
