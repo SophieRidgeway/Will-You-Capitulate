@@ -8,13 +8,25 @@ using Random = UnityEngine.Random;
 public class AchievementManager : MonoBehaviour
 {
     [SerializeField] bool PlayingHatVersion = false;
+    [SerializeField] bool PlayingAcheivementVersion = false;
     [SerializeField] GameObject hatUnlockedCan;
-    [SerializeField] GameObject welcomeScreen;
+    [SerializeField] GameObject welcomeScreenHat;
+    [SerializeField] GameObject welcomScreenAchive;
     [SerializeField] GameObject exitLight;
     [SerializeField] GameObject exitCollision;
     [SerializeField] GameObject exitScreen;
     [SerializeField] GameObject helpScreen;
     [SerializeField] GameObject hatGuideCan;
+    [SerializeField] GameObject achivGuideCan;
+
+    [SerializeField] GameObject deathSquare;
+    [SerializeField] GameObject pizzaPizzaPizza;
+    [SerializeField] GameObject protectCone;
+    [SerializeField] GameObject trobleRelic;
+    [SerializeField] GameObject lifeFlashBeforeEyes;
+    [SerializeField] GameObject beyondWall;
+    [SerializeField] GameObject ecoWarrio;
+    [SerializeField] GameObject allHailMe;
 
     private GameObject crown;
     private GameObject magicHat;
@@ -32,11 +44,11 @@ public class AchievementManager : MonoBehaviour
     private GameObject tempGameObject;
     private bool killedFirstFour;
     private int robotHeadCollectio;
-    private bool killedAllHat = false;
-    private bool Killed9Hat = false;
+    private bool hasKilledAllClaimed = false;
+    private bool killed9 = false;
     private int hatDrop;
     private bool lifeFlashedClaimed = false;
-    private bool pizzaHatClaimed = false;
+    private bool claimedPizza = false;
     private bool secretRoomClaimed = false;
     private bool hasStartedGame = false;
     private CharacterAiming characterAiming;
@@ -46,6 +58,7 @@ public class AchievementManager : MonoBehaviour
     private int enimeiesdead;
 
     private List<GameObject> hats = new List<GameObject>();
+    private Queue popUp = new Queue(); 
 
     // Start is called before the first frame update
     void Start()
@@ -57,12 +70,19 @@ public class AchievementManager : MonoBehaviour
         killedFirstFour = false;
         if(PlayingHatVersion == true)
         {
+            welcomeScreenHat.SetActive(true);
             tempGameObject = new GameObject();
             hats.Add(tempGameObject);
             hatDrop = Random.Range(1, 10);
             FindHats();
         }
+
+        if(PlayingAcheivementVersion == true)
+        {
+            welcomScreenAchive.SetActive(true);
+        }
     }
+
 
     private void StartGame()
     {
@@ -74,12 +94,23 @@ public class AchievementManager : MonoBehaviour
         {
             PlayGameHat();
         }
+        else if (Input.GetKeyDown(KeyCode.Return) && hasStartedGame == false && PlayingAcheivementVersion == true)
+        {
+            PlayingAchivment();
+        }
+    }
+
+    private void PlayingAchivment()
+    {
+        hasStartedGame = true;
+        welcomScreenAchive.SetActive(false);
+        characterAiming.Cursure(true);
     }
 
     private void PlayGameHat()
     {
         hasStartedGame = true;
-        welcomeScreen.SetActive(false);
+        welcomeScreenHat.SetActive(false);
         characterAiming.Cursure(true);
     }
 
@@ -95,6 +126,7 @@ public class AchievementManager : MonoBehaviour
         viking = GameObject.Find("Cyborg/Hips/Spine/Spine1/Spine2/Neck/Head/VikingHelmet");
     }
 
+
     // Update is called once per frame
     void Update()
     {
@@ -106,6 +138,12 @@ public class AchievementManager : MonoBehaviour
                 HelpMenuHats();
                 HatGuide();
                 CycleHats();
+            }
+
+            if(PlayingAcheivementVersion == true)
+            {
+                HelpMenuAchive();
+                AchivmentGuide();
             }
             First4Down();
             killed9Enemies();
@@ -129,9 +167,29 @@ public class AchievementManager : MonoBehaviour
         {
             hatGuideCan.SetActive(true);
             pauseGame = true;
-            UpdateHatText();
+            UpdatePopUpText();
         }
     }
+
+    private void AchivmentGuide()
+    {
+        if(Input.GetKeyDown(KeyCode.P))
+        {
+            achivGuideCan.SetActive(true);
+            pauseGame = true;
+            UpdatePopUpText();
+        }
+    }
+
+    private void HelpMenuAchive()
+    {
+        if(Input.GetKeyDown(KeyCode.L))
+        {
+            //help menu
+            pauseGame = true;
+        }
+    }
+
 
     private void ResumeGame()
     {
@@ -139,13 +197,14 @@ public class AchievementManager : MonoBehaviour
         {
             helpScreen.SetActive(false);
             hatGuideCan.SetActive(false);
+            achivGuideCan.SetActive(false);
             pauseGame = false;
         }
     }
 
     private void First4Down()
     {
-        if (enemieCount == 13 && killedFirstFour == false)
+        if (enemieCount <= 13 && killedFirstFour == false)
         {
             if(PlayingHatVersion == true)
             {
@@ -153,33 +212,55 @@ public class AchievementManager : MonoBehaviour
                 hats.Add(cowboy);
                 ShowHatUnlocked(true);
             }
+            if(PlayingAcheivementVersion == true)
+            {
+                QueuePopups(deathSquare);
+            }
             killedFirstFour = true;
+        }
+    }
+
+    private void QueuePopups(GameObject popItem)
+    {
+        popUp.Enqueue(popItem);
+        foreach (var obj in popUp)
+        {
+            popItem.SetActive(true);
+            StartCoroutine(DisableCanvas(popItem));
         }
     }
 
     private void killed9Enemies()
     {
-        if (enemieCount == 8 && Killed9Hat == false && PlayingHatVersion == true)
+        if (enemieCount == 8 && killed9 == false)
         {
-            if(hatDrop <= 4)
+            if(hatDrop <= 4 && PlayingHatVersion == true)
             {
                 hats.Add(shower);
                 ShowHatUnlocked(true);
-                Killed9Hat = true;
             }
+            if(PlayingAcheivementVersion == true && characterAiming.CountingBullets() <= 20)
+            {
+                QueuePopups(ecoWarrio);
+            }
+            killed9 = true;
         }
     }
 
     private void KilledAll()
     {
-        if(enemieCount == 0 && killedAllHat == false)
+        if(enemieCount == 0 && hasKilledAllClaimed == false)
         {
             if(PlayingHatVersion == true)
             {
                 hats.Add(crown);
                 ShowHatUnlocked(true);
-                killedAllHat = true;
             }
+            if(PlayingAcheivementVersion == true)
+            {
+                QueuePopups(allHailMe);
+            }
+            hasKilledAllClaimed = true;
             exitLight.SetActive(true);
             exitCollision.SetActive(true);
         }
@@ -193,6 +274,7 @@ public class AchievementManager : MonoBehaviour
             }
         }
     }
+
 
     private void CycleHats()
     {
@@ -235,27 +317,35 @@ public class AchievementManager : MonoBehaviour
     public void ConeAchive(int cones)
     {
         coneAmount = coneAmount + cones;
-        if (coneAmount == 8)
+        if (coneAmount >= 8)
         {
             if(PlayingHatVersion == true)
             {
                 hats.Add(miner);
                 ShowHatUnlocked(true);
             }
+            if(PlayingAcheivementVersion == true)
+            {
+                QueuePopups(protectCone);
+            }
         }
 
     }
 
-    public void PizzaHat(bool pizza)
+    public void Pizza(bool pizza)
     {
-        if (pizza == true && pizzaHatClaimed == false)
+        if (pizza == true && claimedPizza == false)
         {
             if(PlayingHatVersion == true)
             {
                 hats.Add(police);
                 ShowHatUnlocked(true);
             }
-            pizzaHatClaimed = true;
+            if(PlayingAcheivementVersion == true)
+            {
+                QueuePopups(pizzaPizzaPizza);
+            }
+            claimedPizza = true;
         }
     }
 
@@ -267,6 +357,10 @@ public class AchievementManager : MonoBehaviour
             {
                 hats.Add(magicHat);
                 ShowHatUnlocked(true);
+            }
+            if(PlayingAcheivementVersion == true)
+            {
+                QueuePopups(beyondWall);
             }
             secretRoomClaimed = true;
         }
@@ -280,6 +374,10 @@ public class AchievementManager : MonoBehaviour
             {
                 hats.Add(viking);
                 ShowHatUnlocked(true);
+            }
+            if(PlayingAcheivementVersion == true)
+            {
+                QueuePopups(lifeFlashBeforeEyes);
             }
             lifeFlashedClaimed = true;
         }
@@ -295,6 +393,10 @@ public class AchievementManager : MonoBehaviour
                 hats.Add(sombrero);
                 ShowHatUnlocked(true);
             }
+            if(PlayingAcheivementVersion == true)
+            {
+                QueuePopups(trobleRelic);
+            }
         }
     }
 
@@ -303,16 +405,16 @@ public class AchievementManager : MonoBehaviour
         print("Called canvas");
         if (show == true)
         {
-            StartCoroutine(DisableCanvas());
+            StartCoroutine(DisableCanvas(hatUnlockedCan));
             hatUnlockedCan.SetActive(true);
             show = false;
         }
     }
 
-    IEnumerator DisableCanvas()
+    IEnumerator DisableCanvas(GameObject canvas)
     {
-        yield return new WaitForSeconds(3f);
-        hatUnlockedCan.SetActive(false);
+        yield return new WaitForSeconds(5f);
+        canvas.SetActive(false);
     }
 
     public bool GameInSession()
@@ -322,7 +424,6 @@ public class AchievementManager : MonoBehaviour
 
     public void CanExit(bool exit)
     {
-        print("In The achivment script");
         isExiting = exit;
     }
 
@@ -339,7 +440,7 @@ public class AchievementManager : MonoBehaviour
         return pauseGame;
     }
 
-    private void UpdateHatText()
+    private void UpdatePopUpText()
     {
         GameObject kill4Text = GameObject.Find("Kill4");
         GameObject kill9Text = GameObject.Find("Kill9");
@@ -350,57 +451,118 @@ public class AchievementManager : MonoBehaviour
         GameObject secretText = GameObject.Find("Secret");
         GameObject AlmostDead = GameObject.Find("AlmostDead");
 
-        if (killedFirstFour == false)
+        GameObject AchiveKilled4 = GameObject.Find("AchiveKill4");
+        GameObject AchiveKill9 = GameObject.Find("AchiveKill9");
+        GameObject AchiveKillAll = GameObject.Find("AchiveKillAll");
+        GameObject AchiveRobotText = GameObject.Find("AchiveRobotText");
+        GameObject AchiveTraffic = GameObject.Find("AchiveTraffic");
+        GameObject AchivePizza = GameObject.Find("AchivePizza");
+        GameObject AchiveSecret = GameObject.Find("AchiveSecret");
+        GameObject AchiveAlmostDied = GameObject.Find("AchiveAlmostDied");
+
+        if (killedFirstFour == false && PlayingHatVersion == true)
         {
             kill4Text.GetComponent<Text>().text = (enimeiesdead + "/4");
         }
-        if(killedFirstFour == true)
+        if (killedFirstFour == false && PlayingAcheivementVersion == true)
+        {
+            AchiveKilled4.GetComponent<Text>().text = (enimeiesdead + "/4");
+        }
+        if (killedFirstFour == true && PlayingHatVersion == true)
         {
             kill4Text.GetComponent<Text>().text = ("Unlocked");
         }
-        if(enimeiesdead >= 8 && Killed9Hat == false)
+        if (killedFirstFour == true && PlayingAcheivementVersion == true)
+        {
+            AchiveKilled4.GetComponent<Text>().text = ("Unlocked");
+        }
+        if (enimeiesdead >= 8 && killed9 == false)
         {
             kill9Text.GetComponent<Text>().text = ("Luck failed you");
         }
-        if(Killed9Hat == true)
+        if(killed9 == true && PlayingHatVersion == true)
         {
             kill9Text.GetComponent<Text>().text = ("Unlocked");
         }
-        if (killedAllHat == true)
+        if (killed9 == true && PlayingAcheivementVersion == true)
+        {
+            AchiveKill9.GetComponent<Text>().text = ("Unlocked");
+        }
+        if (killed9 != true && PlayingHatVersion == true)
+        {
+            kill9Text.GetComponent<Text>().text = ("Locked");
+        }
+        if (hasKilledAllClaimed == true && PlayingHatVersion == true)
         {
             killedAllText.GetComponent<Text>().text = ("Unlocked");
         }
-        if(robotHeadCollectio != 5)
+        if (hasKilledAllClaimed == true && PlayingAcheivementVersion == true)
+        {
+            AchiveKillAll.GetComponent<Text>().text = ("Unlocked");
+        }
+        if (robotHeadCollectio != 5 && PlayingHatVersion == true)
         {
             robotText.GetComponent<Text>().text = (robotHeadCollectio + "/5");
         }
-        if(robotHeadCollectio == 5)
+        if (robotHeadCollectio != 5 && PlayingAcheivementVersion == true)
+        {
+            AchiveRobotText.GetComponent<Text>().text = (robotHeadCollectio + "/5");
+        }
+        if (robotHeadCollectio == 5 && PlayingHatVersion == true)
         {
             robotText.GetComponent<Text>().text = ("Unlocked");
         }
-        if(coneAmount != 8)
+        if (robotHeadCollectio == 5 && PlayingAcheivementVersion == true)
+        {
+            AchiveRobotText.GetComponent<Text>().text = ("Unlocked");
+        }
+        if (coneAmount != 8 && PlayingHatVersion == true)
         {
             traffic.GetComponent<Text>().text = (coneAmount + "/8");
         }
-        if(coneAmount >=8)
+        if (coneAmount != 8 && PlayingAcheivementVersion == true)
+        {
+            AchiveTraffic.GetComponent<Text>().text = (coneAmount + "/8");
+        }
+        if (coneAmount >=8 && PlayingHatVersion == true)
         {
             traffic.GetComponent<Text>().text = ("Unlocked");
         }
-        if(pizzaHatClaimed == false)
+        if (coneAmount >= 8 && PlayingAcheivementVersion == true)
+        {
+            AchiveTraffic.GetComponent<Text>().text = ("Unlocked");
+        }
+        if (claimedPizza == false && PlayingHatVersion == true)
         {
             PizzaText.GetComponent<Text>().text = ("Locked");
         }
-        if(pizzaHatClaimed == true)
+        if (claimedPizza == false && PlayingAcheivementVersion == true)
+        {
+            AchivePizza.GetComponent<Text>().text = ("Locked");
+        }
+        if (claimedPizza == true && PlayingHatVersion == true)
         {
             PizzaText.GetComponent<Text>().text = ("Unlocked");
         }
-        if(secretRoomClaimed == true)
+        if (claimedPizza == true && PlayingAcheivementVersion == true)
+        {
+            AchivePizza.GetComponent<Text>().text = ("Unlocked");
+        }
+        if (secretRoomClaimed == true && PlayingHatVersion == true)
         {
             secretText.GetComponent<Text>().text = ("Unlocked");
         }
-        if(lifeFlashedClaimed == true)
+        if (secretRoomClaimed == true && PlayingAcheivementVersion == true)
+        {
+            AchiveSecret.GetComponent<Text>().text = ("Unlocked");
+        }
+        if (lifeFlashedClaimed == true && PlayingHatVersion == true)
         {
             AlmostDead.GetComponent<Text>().text = ("Unlocked");
+        }
+        if (lifeFlashedClaimed == true && PlayingAcheivementVersion == true)
+        {
+            AchiveAlmostDied.GetComponent<Text>().text = ("Unlocked");
         }
     }
 }

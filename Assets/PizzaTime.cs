@@ -17,9 +17,9 @@ public class PizzaTime : MonoBehaviour
     {
         pizzaHitAmount = pizzaHitAmount + hit;
 
-        if(pizzaHitAmount == 3)
+        if(pizzaHitAmount >= 3)
         {
-            achive.PizzaHat(true);
+            achive.Pizza(true);
         }
     }
 }

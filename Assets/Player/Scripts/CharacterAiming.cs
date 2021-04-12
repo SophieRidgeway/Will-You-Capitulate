@@ -20,6 +20,7 @@ public class CharacterAiming : MonoBehaviour
     private bool notSprint;
     private PowerBar powerBar;
     private int currentShots;
+    private int shotCount;
     private AchievementManager achievement;
 
     // Start is called before the first frame update
@@ -88,6 +89,7 @@ public class CharacterAiming : MonoBehaviour
         {
             isAimming = Input.GetMouseButton(1);
 
+            CountingBullets();
 
             if (isAimming && notSprint == true)
             {
@@ -102,8 +104,14 @@ public class CharacterAiming : MonoBehaviour
             {
                 weaponFire.Fire();
                 currentShots = currentShots - 1;
+                shotCount++;
                 powerBar.SetSliderValue(currentShots);
             }
         }
+    }
+
+    public int CountingBullets()
+    {
+        return shotCount;
     }
 }
