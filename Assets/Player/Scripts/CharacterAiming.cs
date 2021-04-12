@@ -104,7 +104,7 @@ public class CharacterAiming : MonoBehaviour
             {
                 weaponFire.Fire();
                 currentShots = currentShots - 1;
-                shotCount++;
+                shotCount = shotCount + 1;
                 powerBar.SetSliderValue(currentShots);
             }
         }

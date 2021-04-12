@@ -16,6 +16,7 @@ public class AchievementManager : MonoBehaviour
     [SerializeField] GameObject exitCollision;
     [SerializeField] GameObject exitScreen;
     [SerializeField] GameObject helpScreen;
+    [SerializeField] GameObject helpScreenAchivment;
     [SerializeField] GameObject hatGuideCan;
     [SerializeField] GameObject achivGuideCan;
 
@@ -56,6 +57,9 @@ public class AchievementManager : MonoBehaviour
     private GameRestartManager gameRestart;
     private bool pauseGame = false;
     private int enimeiesdead;
+    private int acomplishedamount;
+    private float timer;
+    private bool canTime = true;
 
     private List<GameObject> hats = new List<GameObject>();
     private Queue popUp = new Queue(); 
@@ -133,6 +137,10 @@ public class AchievementManager : MonoBehaviour
         StartGame();
         if(hasStartedGame)
         {
+            if(canTime == true)
+            {
+                timer += Time.deltaTime;
+            }
             if(PlayingHatVersion == true)
             {
                 HelpMenuHats();
@@ -185,7 +193,7 @@ public class AchievementManager : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.L))
         {
-            //help menu
+            helpScreenAchivment.SetActive(true);
             pauseGame = true;
         }
     }
@@ -198,6 +206,7 @@ public class AchievementManager : MonoBehaviour
             helpScreen.SetActive(false);
             hatGuideCan.SetActive(false);
             achivGuideCan.SetActive(false);
+            helpScreenAchivment.SetActive(false);
             pauseGame = false;
         }
     }
@@ -217,6 +226,7 @@ public class AchievementManager : MonoBehaviour
                 QueuePopups(deathSquare);
             }
             killedFirstFour = true;
+            CompletionAmount(1);
         }
     }
 
@@ -232,18 +242,21 @@ public class AchievementManager : MonoBehaviour
 
     private void killed9Enemies()
     {
-        if (enemieCount == 8 && killed9 == false)
+        if (enemieCount == 8 && killed9 == false && PlayingHatVersion == true)
         {
-            if(hatDrop <= 4 && PlayingHatVersion == true)
+            if(hatDrop <= 4)
             {
                 hats.Add(shower);
                 ShowHatUnlocked(true);
-            }
-            if(PlayingAcheivementVersion == true && characterAiming.CountingBullets() <= 20)
-            {
-                QueuePopups(ecoWarrio);
+                CompletionAmount(1);
             }
             killed9 = true;
+        }
+        if (PlayingAcheivementVersion == true && characterAiming.CountingBullets() <= 20 && enemieCount == 8 && killed9 == false)
+        {
+            QueuePopups(ecoWarrio);
+            killed9 = true;
+            CompletionAmount(1);
         }
     }
 
@@ -261,20 +274,47 @@ public class AchievementManager : MonoBehaviour
                 QueuePopups(allHailMe);
             }
             hasKilledAllClaimed = true;
+            CompletionAmount(1);
             exitLight.SetActive(true);
             exitCollision.SetActive(true);
         }
 
         if(isExiting == true)
         {
-            exitScreen.SetActive(true);
-            if(Input.GetKey(KeyCode.Escape))
+            GameEndingHandle();
+
+            if (Input.GetKey(KeyCode.Escape))
             {
                 ExitApplication(true);
             }
         }
     }
 
+    private void GameEndingHandle()
+    {
+        exitScreen.SetActive(true);
+        if (PlayingHatVersion == true || PlayingAcheivementVersion == true)
+        {
+            canTime = false;
+            GameObject Complet = GameObject.Find("Complet");
+            GameObject timeTook = GameObject.Find("Time");
+            float minutes = Mathf.FloorToInt(timer / 60);
+            float seconds = Mathf.FloorToInt(timer % 60);
+
+            Complet.SetActive(true);
+            timeTook.SetActive(true);
+            timeTook.GetComponent<Text>().text = ("You took " + (string.Format("{0:00}:{1:00}", minutes, seconds) + " to complet the mission"));
+
+            if (PlayingHatVersion == true)
+            {
+                Complet.GetComponent<Text>().text = ("You collected " + acomplishedamount + " out of 8 hats!");
+            }
+            if (PlayingAcheivementVersion == true)
+            {
+                Complet.GetComponent<Text>().text = ("You completed " + acomplishedamount + " out of 8 achievments!");
+            }
+        }
+    }
 
     private void CycleHats()
     {
@@ -317,7 +357,7 @@ public class AchievementManager : MonoBehaviour
     public void ConeAchive(int cones)
     {
         coneAmount = coneAmount + cones;
-        if (coneAmount >= 8)
+        if (coneAmount == 8)
         {
             if(PlayingHatVersion == true)
             {
@@ -328,6 +368,7 @@ public class AchievementManager : MonoBehaviour
             {
                 QueuePopups(protectCone);
             }
+            CompletionAmount(1);
         }
 
     }
@@ -346,6 +387,7 @@ public class AchievementManager : MonoBehaviour
                 QueuePopups(pizzaPizzaPizza);
             }
             claimedPizza = true;
+            CompletionAmount(1);
         }
     }
 
@@ -363,6 +405,7 @@ public class AchievementManager : MonoBehaviour
                 QueuePopups(beyondWall);
             }
             secretRoomClaimed = true;
+            CompletionAmount(1);
         }
     }
 
@@ -380,6 +423,7 @@ public class AchievementManager : MonoBehaviour
                 QueuePopups(lifeFlashBeforeEyes);
             }
             lifeFlashedClaimed = true;
+            CompletionAmount(1);
         }
     }
 
@@ -397,6 +441,7 @@ public class AchievementManager : MonoBehaviour
             {
                 QueuePopups(trobleRelic);
             }
+            CompletionAmount(1);
         }
     }
 
@@ -442,23 +487,11 @@ public class AchievementManager : MonoBehaviour
 
     private void UpdatePopUpText()
     {
-        GameObject kill4Text = GameObject.Find("Kill4");
-        GameObject kill9Text = GameObject.Find("Kill9");
-        GameObject killedAllText = GameObject.Find("KilledAll");
-        GameObject robotText = GameObject.Find("RobotText");
-        GameObject traffic = GameObject.Find("TrafficText");
-        GameObject PizzaText = GameObject.Find("PizzaText");
-        GameObject secretText = GameObject.Find("Secret");
-        GameObject AlmostDead = GameObject.Find("AlmostDead");
+        GameObject kill4Text, kill9Text, killedAllText, robotText, traffic, PizzaText, secretText, AlmostDead;
+        FindHatText(out kill4Text, out kill9Text, out killedAllText, out robotText, out traffic, out PizzaText, out secretText, out AlmostDead);
 
-        GameObject AchiveKilled4 = GameObject.Find("AchiveKill4");
-        GameObject AchiveKill9 = GameObject.Find("AchiveKill9");
-        GameObject AchiveKillAll = GameObject.Find("AchiveKillAll");
-        GameObject AchiveRobotText = GameObject.Find("AchiveRobotText");
-        GameObject AchiveTraffic = GameObject.Find("AchiveTraffic");
-        GameObject AchivePizza = GameObject.Find("AchivePizza");
-        GameObject AchiveSecret = GameObject.Find("AchiveSecret");
-        GameObject AchiveAlmostDied = GameObject.Find("AchiveAlmostDied");
+        GameObject AchiveKilled4, AchiveKill9, AchiveKillAll, AchiveRobotText, AchiveTraffic, AchivePizza, AchiveSecret, AchiveAlmostDied;
+        FindAchiveText(out AchiveKilled4, out AchiveKill9, out AchiveKillAll, out AchiveRobotText, out AchiveTraffic, out AchivePizza, out AchiveSecret, out AchiveAlmostDied);
 
         if (killedFirstFour == false && PlayingHatVersion == true)
         {
@@ -476,11 +509,11 @@ public class AchievementManager : MonoBehaviour
         {
             AchiveKilled4.GetComponent<Text>().text = ("Unlocked");
         }
-        if (enimeiesdead >= 8 && killed9 == false)
+        if (enimeiesdead >= 8 && killed9 == false && PlayingHatVersion)
         {
             kill9Text.GetComponent<Text>().text = ("Luck failed you");
         }
-        if(killed9 == true && PlayingHatVersion == true)
+        if (killed9 == true && PlayingHatVersion == true)
         {
             kill9Text.GetComponent<Text>().text = ("Unlocked");
         }
@@ -524,11 +557,11 @@ public class AchievementManager : MonoBehaviour
         {
             AchiveTraffic.GetComponent<Text>().text = (coneAmount + "/8");
         }
-        if (coneAmount >=8 && PlayingHatVersion == true)
+        if (coneAmount == 8 && PlayingHatVersion == true)
         {
             traffic.GetComponent<Text>().text = ("Unlocked");
         }
-        if (coneAmount >= 8 && PlayingAcheivementVersion == true)
+        if (coneAmount == 8 && PlayingAcheivementVersion == true)
         {
             AchiveTraffic.GetComponent<Text>().text = ("Unlocked");
         }
@@ -564,5 +597,34 @@ public class AchievementManager : MonoBehaviour
         {
             AchiveAlmostDied.GetComponent<Text>().text = ("Unlocked");
         }
+    }
+
+    private static void FindAchiveText(out GameObject AchiveKilled4, out GameObject AchiveKill9, out GameObject AchiveKillAll, out GameObject AchiveRobotText, out GameObject AchiveTraffic, out GameObject AchivePizza, out GameObject AchiveSecret, out GameObject AchiveAlmostDied)
+    {
+        AchiveKilled4 = GameObject.Find("AchiveKill4");
+        AchiveKill9 = GameObject.Find("AchiveKill9");
+        AchiveKillAll = GameObject.Find("AchiveKillAll");
+        AchiveRobotText = GameObject.Find("AchiveRobotText");
+        AchiveTraffic = GameObject.Find("AchiveTraffic");
+        AchivePizza = GameObject.Find("AchivePizza");
+        AchiveSecret = GameObject.Find("AchiveSecret");
+        AchiveAlmostDied = GameObject.Find("AchiveAlmostDied");
+    }
+
+    private static void FindHatText(out GameObject kill4Text, out GameObject kill9Text, out GameObject killedAllText, out GameObject robotText, out GameObject traffic, out GameObject PizzaText, out GameObject secretText, out GameObject AlmostDead)
+    {
+        kill4Text = GameObject.Find("Kill4");
+        kill9Text = GameObject.Find("Kill9");
+        killedAllText = GameObject.Find("KilledAll");
+        robotText = GameObject.Find("RobotText");
+        traffic = GameObject.Find("TrafficText");
+        PizzaText = GameObject.Find("PizzaText");
+        secretText = GameObject.Find("Secret");
+        AlmostDead = GameObject.Find("AlmostDead");
+    }
+
+    private void CompletionAmount(int adding)
+    {
+        acomplishedamount = acomplishedamount + adding;
     }
 }
