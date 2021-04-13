@@ -22,6 +22,8 @@ public class AchievementManager : MonoBehaviour
     [SerializeField] GameObject helpScreenNormal;
     [SerializeField] GameObject hatGuideCan;
     [SerializeField] GameObject achivGuideCan;
+    [SerializeField] GameObject playInformation;
+    [SerializeField] GameObject beaconText;
 
     [SerializeField] GameObject deathSquare;
     [SerializeField] GameObject pizzaPizzaPizza;
@@ -125,6 +127,7 @@ public class AchievementManager : MonoBehaviour
         hasStartedGame = true;
         welcomeScreenNormal.SetActive(false);
         characterAiming.Cursure(true);
+        DisplayGameInformation();
     }
 
     private void PlayingAchivment()
@@ -132,6 +135,7 @@ public class AchievementManager : MonoBehaviour
         hasStartedGame = true;
         welcomScreenAchive.SetActive(false);
         characterAiming.Cursure(true);
+        DisplayGameInformation();
     }
 
     private void PlayGameHat()
@@ -139,6 +143,13 @@ public class AchievementManager : MonoBehaviour
         hasStartedGame = true;
         welcomeScreenHat.SetActive(false);
         characterAiming.Cursure(true);
+        DisplayGameInformation();
+    }
+
+    private void DisplayGameInformation()
+    {
+        playInformation.SetActive(true);
+        StartCoroutine(DisableCanvasInformation());
     }
 
     private void FindHats()
@@ -160,7 +171,7 @@ public class AchievementManager : MonoBehaviour
         StartGame();
         if(hasStartedGame)
         {
-            if(canTime == true)
+            if (canTime == true)
             {
                 timer += Time.deltaTime;
             }
@@ -314,8 +325,17 @@ public class AchievementManager : MonoBehaviour
             }
             hasKilledAllClaimed = true;
             CompletionAmount(1);
-            exitLight.SetActive(true);
-            exitCollision.SetActive(true);
+            if(PlayingHatVersion == true || PlayingAcheivementVersion == true)
+            {
+                StartCoroutine(WaitToShowEndText());
+            }
+            else
+            {
+                beaconText.SetActive(true);
+                exitLight.SetActive(true);
+                exitCollision.SetActive(true);
+                StartCoroutine(StopBeaconText());
+            }
         }
 
         if(isExiting == true)
@@ -359,6 +379,21 @@ public class AchievementManager : MonoBehaviour
                 Complet.GetComponent<Text>().text = ("       ");
             }
         }
+    }
+
+    IEnumerator WaitToShowEndText()
+    {
+        yield return new WaitForSeconds(5f);
+        beaconText.SetActive(true);
+        exitLight.SetActive(true);
+        exitCollision.SetActive(true);
+        StartCoroutine(StopBeaconText());
+    }
+
+    IEnumerator StopBeaconText()
+    {
+        yield return new WaitForSeconds(10f);
+        beaconText.SetActive(false);
     }
 
     private void CycleHats()
@@ -492,11 +527,10 @@ public class AchievementManager : MonoBehaviour
 
     public void ShowHatUnlocked(bool show)
     {
-        print("Called canvas");
         if (show == true)
         {
-            StartCoroutine(DisableCanvas(hatUnlockedCan));
             hatUnlockedCan.SetActive(true);
+            StartCoroutine(DisableCanvas(hatUnlockedCan));
             show = false;
         }
     }
@@ -505,6 +539,12 @@ public class AchievementManager : MonoBehaviour
     {
         yield return new WaitForSeconds(5f);
         canvas.SetActive(false);
+    }
+
+    IEnumerator DisableCanvasInformation()
+    {
+        yield return new WaitForSeconds(15f);
+        playInformation.SetActive(false);
     }
 
     public bool GameInSession()
