@@ -61,7 +61,6 @@ public class characterMovement : MonoBehaviour
         bool isSprinting = Input.GetKey(KeyCode.LeftShift);
         if (isSprinting == true)
         {
-            print("here");
             animator.SetBool(isSprintingParam, isSprinting);
             characterAiming.NoSprint(false);
             RigBuilder.enabled = false;
@@ -71,7 +70,6 @@ public class characterMovement : MonoBehaviour
         }
         else
         {
-            print("there");
             animator.SetBool(isSprintingParam, false);
             characterAiming.NoSprint(true);
             RigBuilder.enabled = true;
