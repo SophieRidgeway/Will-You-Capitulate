@@ -4,11 +4,14 @@ using UnityEngine;
 
 public class GameRestartManager : MonoBehaviour
 {
+    [SerializeField] AudioSource backNoice;
+
     private bool noWelcome = false;
 
     private void Awake()
     {
         DontDestroyOnLoad(this.gameObject);
+        backNoice.Play();
     }
 
     public void GameReset(bool reset)

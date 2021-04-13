@@ -5,6 +5,7 @@ using UnityEngine;
 public class EnemyColissionCheck : MonoBehaviour
 {
     [SerializeField] int MaxHealth = 5;
+    [SerializeField] AudioSource deathSound;
 
     private int currentHealth;
     private Animator animator;
@@ -13,6 +14,7 @@ public class EnemyColissionCheck : MonoBehaviour
     private EnemyShooting enemyShooting;
     private Vector3 lower = new Vector3 (100f, 100f, 100f);
     private AchievementManager enemyEvent;
+    private bool played = false;
 
     // Start is called before the first frame update
     void Start()
@@ -44,6 +46,11 @@ public class EnemyColissionCheck : MonoBehaviour
         animator.SetBool(isDeadPar, true);
         enemyMovement.enabled = false;
         enemyShooting.enabled = false;
+        if(played == false)
+        {
+            deathSound.Play();
+            played = true;
+        }
         StartCoroutine(MoveToDestroy());
     }
 

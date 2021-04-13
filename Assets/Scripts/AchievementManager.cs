@@ -33,6 +33,7 @@ public class AchievementManager : MonoBehaviour
     [SerializeField] GameObject beyondWall;
     [SerializeField] GameObject ecoWarrio;
     [SerializeField] GameObject allHailMe;
+    [SerializeField] AudioSource popupSound;
 
     private GameObject crown;
     private GameObject magicHat;
@@ -286,6 +287,7 @@ public class AchievementManager : MonoBehaviour
         foreach (var obj in popUp)
         {
             popItem.SetActive(true);
+            popupSound.Play();
             StartCoroutine(DisableCanvas(popItem));
         }
     }
@@ -529,6 +531,7 @@ public class AchievementManager : MonoBehaviour
     {
         if (show == true)
         {
+            popupSound.Play();
             hatUnlockedCan.SetActive(true);
             StartCoroutine(DisableCanvas(hatUnlockedCan));
             show = false;

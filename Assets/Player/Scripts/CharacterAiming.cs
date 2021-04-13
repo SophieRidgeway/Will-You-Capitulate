@@ -10,6 +10,7 @@ public class CharacterAiming : MonoBehaviour
     [SerializeField] Cinemachine.AxisState xAxis;
     [SerializeField] Cinemachine.AxisState yAxis;
     [SerializeField] Transform camraLookAt;
+    [SerializeField] AudioSource fireShot;
 
     private Camera mainCamera;
     private PlayerWeaponFire weaponFire;
@@ -102,6 +103,7 @@ public class CharacterAiming : MonoBehaviour
 
             if (Input.GetButtonDown("Fire1") && fireOk == true && currentShots > 0)
             {
+                fireShot.Play();
                 weaponFire.Fire();
                 currentShots = currentShots - 1;
                 shotCount = shotCount + 1;
